@@ -56,7 +56,6 @@ void __stdcall EventKilledHandler(DWORD Killed, DWORD Killer, DWORD KillerObject
 	AliveTimer[Killed] = 0;
 	PlayerCoords[Killed].clear();
 	GlobalAreas.DeletePlayer(Killed);
-	ResetHistory(Killed);
 
 #ifdef HALORANK
 	if (GlobalPrefs->HaloRank)

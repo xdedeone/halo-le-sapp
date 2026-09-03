@@ -41,15 +41,15 @@ jobs:
 
       - name: Build 7z
         run: |
-          msbuild 3pp\7z\C\7z.vcxproj /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=10.0 /m
+          msbuild 3pp\7z\C\7z.vcxproj /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=10.0 /p:SolutionDir="${{ github.workspace }}\" /m
 
       - name: Build SappPacker
         run: |
-          msbuild SappPacker\SappPacker.vcxproj /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=10.0 /m
+          msbuild SappPacker\SappPacker.vcxproj /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=10.0 /p:SolutionDir="${{ github.workspace }}\" /m
 
       - name: Build SAPP
         run: |
-          msbuild Sapp\Sapp.vcxproj /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=10.0 /m
+          msbuild Sapp\Sapp.vcxproj /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=10.0 /p:SolutionDir="${{ github.workspace }}\" /m
 
       - name: Upload SAPP DLL Artifact
         uses: actions/upload-artifact@v4

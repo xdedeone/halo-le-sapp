@@ -176,8 +176,6 @@ void __stdcall MLeave(PresenceItem* Machine)
 
 	ResetPlayerVars(PlayerIndex);
 
-	ResetHistory(PlayerIndex);
-
 	auto& it = PlayersLeft.find(PlayerID[PlayerIndex]);
 	if (it != PlayersLeft.end())
 	{
