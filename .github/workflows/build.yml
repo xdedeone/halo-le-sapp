@@ -16,6 +16,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Ensure LuaJIT sources exist
+        shell: pwsh
+        run: |
+          if (-not (Test-Path "3pp/LuaJIT-2.1.0-beta3/src/msvcbuild.bat")) {
+            Write-Host "LuaJIT not found in repository, cloning branch v2.1..."
+            New-Item -ItemType Directory -Force -Path "3pp"
+            git clone --depth 1 --branch v2.1 https://github.com/LuaJIT/LuaJIT.git 3pp/LuaJIT-2.1.0-beta3
+          }
+
       - name: Setup MSVC developer environment (x86)
         uses: ilammy/msvc-dev-cmd@v1
         with:
