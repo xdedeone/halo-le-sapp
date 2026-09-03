@@ -6,7 +6,6 @@
 #include "HaloUtilities.h"
 #include "LogThread.h"
 #include "MiscellaneousFunctions.h"
-#include "NoLead.h"
 #include "ObjectManagement.h"
 #include "OnlineAdmins.h"
 #include "Patcher.h"
@@ -67,7 +66,9 @@ void AimbotScan()
 					if (i != j && PlayerAliveOnly(j))
 					{
 						Dynamic_Player* tPlayer = ObjectTable[PlayerTable[j].ObjectIndexNum].Offset;
-						vect3f Target = tPlayer->HeadCoord - tPlayer->PlayerVectors.Mov * (int)PingIndex[i];
+						int pingIndex = int(ceil(int(PlayerTable[i].ping - 2) * 0.03)) + 1;
+						if (pingIndex < 1) pingIndex = 1;
+						vect3f Target = tPlayer->HeadCoord - tPlayer->PlayerVectors.Mov * pingIndex;
 						vect3f v1(Target - Current);
 
 						float Deg = GetCameraAngle(Player->Camera, v1);

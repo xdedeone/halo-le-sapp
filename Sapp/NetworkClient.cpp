@@ -556,7 +556,7 @@ void NetworkClient::SendStats()
 	#else
 		MyServerStats.HaloVerType = 1;
 	#endif
-		MyServerStats.NoLead = GlobalPrefs->NoLead;
+		MyServerStats.NoLead = 0;
 		MyServerStats.HAC = GlobalPrefs->AntiCheat;
 		MyServerStats.Version = Version;
 		MyServerStats.SappVersion = CurrentVersion;

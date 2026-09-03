@@ -162,9 +162,6 @@ void CommandFactory::LoadCommands()
 	AddCommand(std::make_unique<CommandSJLevel>());
 	AddCommand(std::make_unique<CommandScrimMode>());
 	AddCommand(std::make_unique<CommandDisableBacktap>());
-	AddCommand(std::make_unique<CommandNoLead>());
-	AddCommand(std::make_unique<CommandLead>());
-	AddCommand(std::make_unique<CommandCustomLead>());
 	AddCommand(std::make_unique<CommandMaxVotes>());
 	AddCommand(std::make_unique<CommandMaxIdle>());
 	AddCommand(std::make_unique<CommandPacketLimit>());

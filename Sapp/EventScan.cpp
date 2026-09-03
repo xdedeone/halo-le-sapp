@@ -18,7 +18,6 @@
 #include "NetworkClient.h"
 #include "NetworkHook.h"
 #include "NetworkEvents.h"
-#include "NoLead.h"
 #include "ObjectInteractions.h"
 #include "ObjectManagement.h"
 #include "OnlineAdmins.h"
@@ -204,13 +203,6 @@ void LoadEventScan()
 		LastWarp[i] = 0;
 
 		PlayerApps[i] = APP_Nothing;
-
-		if(GlobalPrefs->NoLead)
-			Lead[i] = 0;
-		else
-			Lead[i] = 1;
-
-		CustomLead[i] = 0;
 
 		if (AntiCheat)
 		{
@@ -658,8 +650,6 @@ void ResetPlayers()
 
 void ClearGlobalVectors()
 {
-	ClearNoLeadCache();
-
 	DoSList.clear();
 	
 	JoinReqests.clear();

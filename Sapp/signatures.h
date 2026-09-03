@@ -140,8 +140,6 @@ extern const char* const ObjectInteractionVehi;
 
 extern const char* const ObjectInteractionOther;
 
-extern const char* const BulletMagnetFuncCall;
-
 //extern const char* const SplashDamageBeginCode;
 
 //extern const char* const SplashDamageEndCode;

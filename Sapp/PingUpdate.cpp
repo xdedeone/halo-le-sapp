@@ -2,7 +2,6 @@
 
 #include "Addresses.h"
 #include "HaloUtilities.h"
-#include "NoLead.h"
 #include "Patcher.h"
 
 double PCFreq;
@@ -62,12 +61,6 @@ void __stdcall UpdatePlayerPing(Player_Table_Item* Player)
 		QueryPerformanceCounter(&li);
 
 		Player->ping = DWORD(floor(double(li.QuadPart - LastUpdate[PlayerIndex].QuadPart) / PCFreq + 0.5));		
-
-		int Index = int(ceil(int(Player->ping - CustomLead[PlayerIndex] - 2) * 0.03)) + 1;
-		if (Index < 1)
-			Index = 1;
-
-		PingIndex[PlayerIndex] = Index;	
 	}
 }
 

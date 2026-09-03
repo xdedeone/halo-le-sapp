@@ -8,7 +8,6 @@
 #include "EventScan.h"
 #include "HaloUtilities.h"
 #include "LogThread.h"
-#include "NoLead.h"
 #include "Patcher.h"
 #include "Prefs.h"
 #include "TextUtilities.h"

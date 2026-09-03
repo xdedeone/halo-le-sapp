@@ -5,7 +5,6 @@
 #include "Event.h"
 #include "EventScan.h"
 #include "HaloUtilities.h"
-#include "NoLead.h"
 #include "Patcher.h"
 
 DWORD FuncGetSpawnPoint;

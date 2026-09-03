@@ -66,8 +66,6 @@ struct PL
 	long Assists;
 	WORD Deaths;
 	bool IsAFK;
-	bool Lead;
-	DWORD CustomLead;
 	bool stfu;
 };
 
@@ -689,24 +687,3 @@ struct Dynamic_Player
 };
 
 #pragma pack(pop)
-
-struct NoLeadObjectItem
-{
-	bool Valid = false;
-	bool Restored = false;
-	size_t Size = 0;
-	Dynamic_Player* Object = nullptr;
-	NoLeadObjectItem* Weapon = nullptr;
-	NoLeadObjectItem* VehicleWeapon = nullptr;
-	~NoLeadObjectItem()
-	{
-		delete Weapon;
-		delete VehicleWeapon;
-		delete[] (uint8_t*)Object;
-	}
-};
-
-struct NoLeadObjectItemRoot : NoLeadObjectItem
-{
-	uint32_t RootIndex;
-};

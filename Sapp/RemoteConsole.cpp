@@ -176,7 +176,7 @@ void RemoteConsole::SendQuery(size_t ClientIndex)
 	resp["opcode"] = RC_QUERY;
 	resp["version"] = RCVersion;
 	resp["sapp_version"] = SappVersion;
-	resp["no-lead"] = GlobalPrefs->NoLead;
+	resp["no-lead"] = false;
 	resp["anticheat"] = GlobalPrefs->AntiCheat;
 	if (ServerRunning())
 	{	

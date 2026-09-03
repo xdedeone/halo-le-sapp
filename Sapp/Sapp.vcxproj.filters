@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Header Files">
@@ -104,9 +104,6 @@
     </Filter>
     <Filter Include="Assembly Code Overrides\Patches\MapLoader">
       <UniqueIdentifier>{e4cef09c-b4f4-4c31-b904-1077b3d19c0c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Assembly Code Overrides\Patches\NoLead">
-      <UniqueIdentifier>{15d179d4-63d7-4351-9b61-32be30b7ffed}</UniqueIdentifier>
     </Filter>
     <Filter Include="Assembly Code Overrides\Patches\MultiTeamVehicles">
       <UniqueIdentifier>{745c1937-08e5-439c-a0fa-26efa9d7e37b}</UniqueIdentifier>
@@ -448,9 +445,6 @@
     </ClInclude>
     <ClInclude Include="CommandDisableObject.h">
       <Filter>Commands\Generic</Filter>
-    </ClInclude>
-    <ClInclude Include="NoLead.h">
-      <Filter>Assembly Code Overrides\Patches\NoLead</Filter>
     </ClInclude>
     <ClInclude Include="NetworkClient.h">
       <Filter>NetworkClient</Filter>
@@ -894,9 +888,6 @@
     </ClCompile>
     <ClCompile Include="PingUpdate.cpp">
       <Filter>Assembly Code Overrides\Patches\PingUpdate</Filter>
-    </ClCompile>
-    <ClCompile Include="NoLead.cpp">
-      <Filter>Assembly Code Overrides\Patches\NoLead</Filter>
     </ClCompile>
     <ClCompile Include="RemoteConsoleNetworking.cpp">
       <Filter>RemoteConsole</Filter>

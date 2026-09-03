@@ -22,7 +22,6 @@
 #include "mtv.h"
 #include "NetworkEvents.h"
 #include "NetworkHook.h"
-#include "NoLead.h"
 #include "ObjectCreation.h"
 #include "ObjectInteractions.h"
 #include "ObjectSyncCleanup.h"

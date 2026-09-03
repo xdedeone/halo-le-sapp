@@ -146,9 +146,6 @@ const char* const ObjectInteractionVehi = "A1????????8B542404";
 
 const char* const ObjectInteractionOther = "83EC14A1????????8B4834";
 
-//const char* const BulletMagnetFuncCall = "8D5C2440C744242400000000";
-const char* const BulletMagnetFuncCall = "51525350E8????????83C41C8BE8";
-
 //const char* const SplashDamageBeginCode = "8B8424CC0000008B4810";
 
 //const char* const SplashDamageEndCode = "E8????????83C4085F5E5D5B81C4B8000000C3";

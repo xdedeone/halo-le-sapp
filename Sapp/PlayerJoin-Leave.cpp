@@ -12,7 +12,6 @@
 #include "LogThread.h"
 #include "Mapcycle.h"
 #include "NetworkClient.h"
-#include "NoLead.h"
 #include "OnlineAdmins.h"
 #include "Patcher.h"
 #include "Prefs.h"
@@ -164,8 +163,6 @@ void __stdcall MLeave(PresenceItem* Machine)
 	Player->LoginFails = LoginFails[PlayerIndex];
 	Player->RconFails = RconFails[PlayerIndex];
 	Player->IsAFK = AFK[PlayerIndex];
-	Player->Lead = Lead[PlayerIndex];
-	Player->CustomLead = CustomLead[PlayerIndex];
 	Player->stfu = stfu[PlayerIndex];
 	Player->RespawnTimer = PlayerTable[PlayerIndex].RespawnTimer;
 	Player->tk_number = PlayerTable[PlayerIndex].tk_number;
@@ -338,8 +335,6 @@ void __stdcall CleanMachines()
 			Player->LoginFails = LoginFails[i];
 			Player->RconFails = RconFails[i];
 			Player->IsAFK = AFK[i];
-			Player->Lead = Lead[i];
-			Player->CustomLead = CustomLead[i];
 			Player->stfu = stfu[i];
 			Player->RespawnTimer = 0;
 			Player->tk_number = PlayerTable[i].tk_number;
@@ -364,8 +359,6 @@ void __stdcall CleanMachines()
 			WriteLog(L"QUIT", FormatWArgs(L"Player Quit, Name: %ls  PlayerNumber: %d", Server->PlayerData[i].name, i));
 		}
 	}
-
-	ClearNoLeadCache();
 
 	GlobalOnlineAdminList.Clear();
 
@@ -410,12 +403,6 @@ void __stdcall PJoin(size_t PlayerIndex)
 	PlayerStats[PlayerIndex].Assists = 0;
 	PlayerStats[PlayerIndex].Deaths = 0;
 
-	CustomLead[PlayerIndex] = 0;
-	if (GlobalPrefs->NoLead)
-		Lead[PlayerIndex] = 0;
-	else
-		Lead[PlayerIndex] = 1;
-
 	if (GlobalPrefs->SaveScores)
 	{
 		auto& it = PlayersLeftStats.find(PlayerID[PlayerIndex]);
@@ -456,8 +443,6 @@ void __stdcall PJoin(size_t PlayerIndex)
 		LoginFails[PlayerIndex] = ptr->LoginFails;
 		RconFails[PlayerIndex] = ptr->RconFails;
 		AFK[PlayerIndex] = ptr->IsAFK;
-		Lead[PlayerIndex] = ptr->Lead;
-		CustomLead[PlayerIndex] = ptr->CustomLead;
 		stfu[PlayerIndex] = ptr->stfu;
 		RespawnTimeLeft[PlayerIndex] = ptr->RespawnTimer;
 		PlayerTable[PlayerIndex].tk_number = ptr->tk_number;

@@ -343,7 +343,7 @@ BOOL __stdcall DllMain(HINSTANCE hinstDLL, DWORD fwdreason, LPVOID lpvReserved)
 
 		sv_say(L"SAPP was loaded!");
 
-		PrintConsole(10, FormatArgs("SAPP Version %hs %hs by seh‚øø, originally by Termy || halo.isimaginary.com", GlobalPrefs->AppVersion, GlobalPrefs->AppHaloType).c_str());
+		PrintConsole(10, FormatArgs("SAPP Version %hs %hs by seh‚øø, originally by Termy, modified by louk || halo.isimaginary.com", GlobalPrefs->AppVersion, GlobalPrefs->AppHaloType).c_str());
 
 		break;
 	}

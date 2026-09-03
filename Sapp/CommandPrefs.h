@@ -5,7 +5,6 @@
 #include "ConsolePatch.h"
 #include "EventScan.h"
 #include "GenericCommand.h"
-#include "NoLead.h"
 #include "mtv.h"
 #include "NetworkEvents.h"
 #include "NetworkHook.h"
@@ -322,36 +321,6 @@ public:
 	{
 		ProcessBoolValue(value, GlobalPrefs->DisableBacktap);
 		env_Print(FormatArgs("Disabling Backtaps: %hs", GlobalPrefs->DisableBacktap ? "enabled" : "disabled").c_str());
-		return true;
-	}
-};
-
-class CommandNoLead final : public PrefBoolCommand
-{
-public:
-	CommandNoLead() : PrefBoolCommand(L"no_lead") {}
-	
-	bool Execute(const CommandEnviroment& env) override
-	{
-		bool changed = ProcessBoolValue(value, GlobalPrefs->NoLead);
-		env_Print(FormatArgs("No Lead: %hs", GlobalPrefs->NoLead ? "enabled" : "disabled").c_str());
-		if(changed)
-		{
-			if(GlobalPrefs->NoLead)
-			{
-				GlobalPrefs->Flags |= 1;
-				memset(Lead, 0, 16);
-				InstallNoLeadHandler();
-			}
-			else
-			{
-				GlobalPrefs->Flags &= ~1;
-				memset(Lead, 1, 16);
-				UninstallNoLeadHandler();
-			}
-			FormatQueryString();
-			sv_say(FormatWArgs(L"The Admin has %ls the No-Lead Mode!", GlobalPrefs->NoLead ? L"ENABLED" : L"DISABLED").c_str());
-		}
 		return true;
 	}
 };

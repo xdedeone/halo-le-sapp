@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include "Admins.h"
 #include "bans.h"
@@ -8,7 +8,6 @@
 #include "CustomCommand.h"
 #include "GenericCommand.h"
 #include "MiscellaneousFunctions.h"
-#include "NoLead.h"
 #include "PlayerCommand.h"
 #include "PlayerJoin-Leave.h"
 #include "ThreadCycleFix.h"
@@ -250,114 +249,6 @@ public:
 	}
 };
 
-class CommandLead final : public GenericCommand
-{
-	std::wstring value;
-
-	bool ParseArgs(ArgContainer& args) override
-	{
-		if (args.argc == 1)
-		{
-			value.clear();
-			return true;
-		}
-		else if (args.argc == 2)
-		{
-			value = std::move(args[1]);
-			return true;
-		}
-		return false;
-	}
-
-public:
-	CommandLead() : GenericCommand(L"lead", L"[boolean]", -1, ServerOnly::no, ClientOnly::yes, Naughty::no, Unalterable::yes) {}
-	
-	bool Execute(const CommandEnviroment& env) override
-	{
-		if (!GlobalPrefs->NoLead)
-		{
-			env_Print("No Lead mode is disabled!");
-		}
-		else if (!value.empty())
-		{
-			ProcessBoolValue(value, Lead[env.sPlayerIndex]);
-		}
-
-		if (Lead[env.sPlayerIndex])
-		{
-			env_Print("You have to lead normally.");
-		}
-		else if (CustomLead[env.sPlayerIndex] > 0)
-		{
-			env_Print(FormatArgs("You have to lead %u ms.", CustomLead[env.sPlayerIndex]).c_str());
-		}
-		else
-		{
-			env_Print("You don't have to lead.");
-		}
-
-		return true;
-	}
-};
-
-class CommandCustomLead final : public GenericCommand
-{
-	size_t ms;
-
-	bool ParseArgs(ArgContainer& args) override
-	{
-		if (args.argc == 1)
-		{
-			ms = -1;
-			return true;
-		}
-		else if (args.argc == 2)
-		{
-			if (ToNumber(args[1], ms) && ms < 1000)
-				return true;
-		}
-		return false;
-	}
-
-public:
-	CommandCustomLead() : GenericCommand(L"clead", L"[milliseconds(0-999)]", -1, ServerOnly::no, ClientOnly::yes, Naughty::no, Unalterable::yes) {}
-
-	bool Execute(const CommandEnviroment& env) override
-	{
-		if (!GlobalPrefs->NoLead)
-		{
-			env_Print("Error: No Lead mode is disabled!");
-			return true;
-		}
-		else if (ms < 1000)
-		{		
-			CustomLead[env.sPlayerIndex] = ms;
-			if (ms > PlayerTable[env.sPlayerIndex].ping + 2)
-				env_Print("Warning: You set a bigger lead than your actual ping, but it WON'T increase any more!");
-
-			if (Lead[env.sPlayerIndex])
-			{
-				env_Print("Warning: This command won't take effect until you enable No Lead for yourself!");
-			}
-		}
-
-		if (Lead[env.sPlayerIndex])
-		{
-			env_Print("You have to lead normally.");
-		}
-		else if (CustomLead[env.sPlayerIndex] > 0)
-		{
-			env_Print(FormatArgs("You have to lead %u ms.", CustomLead[env.sPlayerIndex]).c_str());
-		}
-		else
-		{
-			env_Print("You don't have to lead.");
-		}
-
-		return true;
-	}
-};
-
 class CommandSTFU final : public GenericCommand
 {
 public:
@@ -549,7 +440,7 @@ public:
 		env_Print(FormatWArgs(L"Server Name: %ls", Server->ServerName + i).c_str());
 		env_Print(FormatWArgs(L"Map: %hs | GameType: %ls", CurrentMap.c_str(), CurrentModeW.c_str()).c_str());
 		env_Print(FormatWArgs(L"Time Left: %hs | Players: %u/%u", timeLeft.c_str(), Server->PlayerNumber, Server->MaxPlayers).c_str());
-		env_Print(FormatWArgs(L"Scrim Mode: %ls | NoLead: %ls | Anticheat: %ls", GlobalPrefs->ScrimMode ? L"ON" : L"OFF", GlobalPrefs->NoLead ? L"ON" : L"OFF", GlobalPrefs->AntiCheat ? L"ON" : L"OFF").c_str());
+		env_Print(FormatWArgs(L"Scrim Mode: %ls | Anticheat: %ls", GlobalPrefs->ScrimMode ? L"ON" : L"OFF", GlobalPrefs->AntiCheat ? L"ON" : L"OFF").c_str());
 		return true;
 	}
 };
@@ -564,11 +455,11 @@ public:
 		env_Print(FormatArgs("SAPP Version %hs %hs", GlobalPrefs->AppVersion, GlobalPrefs->AppHaloType).c_str());
 		if (env.type == Enviroment::CHAT || env.type == Enviroment::RCON)
 		{
-			env_Print(L"Developed by sehé°° (2017), continuing the project of Termy (2011).");
+			env_Print(L"Developed by sehé°° (2017), continuing the project of Termy (2011), modified by louk.");
 		}
 		else
 		{
-			env_Print("Developed by seh‚řř (2017), continuing the project of Termy (2011).");
+			env_Print("Developed by seh‚řř (2017), continuing the project of Termy (2011), modified by louk.");
 		}
 		env_Print("URL: halo.isimaginary.com");
 		env_Print("Steam/Evolve: Szotyi2501");

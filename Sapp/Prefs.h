@@ -27,7 +27,7 @@ struct prefs
 #else
 	const char* const AppHaloType = "CE";
 #endif
-	const char* const AppVersion = "10.2.1";
+	const char* const AppVersion = "10.2le";
 	const char* const LuaAPIVersion = "1.12.0.0";
 	const wchar_t* const Me = L"seh鰰";
 	const wchar_t* const Ye = L"yEyE";
@@ -59,7 +59,6 @@ struct prefs
 	bool DebugStrings = false;
 	bool Alias = false;
 	bool OnlyValidAlias = false;
-	bool NoLead = false;
 	bool MTV = false;
 	byte Zombies = 0;
 	bool DisableObjectsPlayer[16] = {};

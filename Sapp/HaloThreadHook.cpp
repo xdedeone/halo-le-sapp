@@ -8,7 +8,6 @@
 #include "LogThread.h"
 #include "Mapcycle.h"
 #include "Mapvote.h"
-#include "NoLead.h"
 #include "Prefs.h"
 #include "Patcher.h"
 #include "TextUtilities.h"
@@ -22,9 +21,6 @@ DWORD HaloThreadHook()
 
 	if (GlobalPrefs->AimbotScanScoreLimit)
 		AimbotScan();
-
-	if (GlobalPrefs->NoLead)
-		UpdateHistory();
 
 	return GameTicksAddress;
 }

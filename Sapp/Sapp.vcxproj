@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -164,15 +164,13 @@
 upx.exe --best --lzma "$(SolutionDir)$(Configuration)\sapp.dll"
 cd $(SolutionDir)$(Configuration)
 SappPacker.exe sapp.dll
-copy sapp.dll "D:\Halo CE"</Command>
+if exist "D:\Halo CE" copy sapp.dll "D:\Halo CE"</Command>
     </PostBuildEvent>
     <PreLinkEvent>
-      <Command>%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat""
-
-cd $(SolutionDir)3pp\LuaJIT-2.1.0-beta3\src
+      <Command>cd $(SolutionDir)3pp\LuaJIT-2.1.0-beta3\src
 if not exist lua51.lib (
-    msvcbuild.bat static
-) </Command>
+    call msvcbuild.bat static
+)</Command>
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='PerfMon|Win32'">
@@ -290,7 +288,7 @@ if not exist lua51.lib (
     </Link>
     <PostBuildEvent>
       <Command>cd $(SolutionDir)$(Configuration)
-copy sapp.dll "D:\Halo CE"</Command>
+if exist "D:\Halo CE" copy sapp.dll "D:\Halo CE"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -380,7 +378,6 @@ copy sapp.dll "D:\Halo CE"</Command>
     <ClInclude Include="PlayerQuitKillFix.h" />
     <ClInclude Include="Prefs.h" />
     <ClInclude Include="rcon.h" />
-    <ClInclude Include="NoLead.h" />
     <ClInclude Include="Replace.h" />
     <ClInclude Include="EventScan.h" />
     <ClInclude Include="codefinder.h" />
@@ -496,7 +493,6 @@ copy sapp.dll "D:\Halo CE"</Command>
     <ClCompile Include="PlayerQuitKillFix.cpp" />
     <ClCompile Include="Prefs.cpp" />
     <ClCompile Include="rcon.cpp" />
-    <ClCompile Include="NoLead.cpp" />
     <ClCompile Include="Replace.cpp" />
     <ClCompile Include="EventScan.cpp" />
     <ClCompile Include="codefinder.cpp" />
