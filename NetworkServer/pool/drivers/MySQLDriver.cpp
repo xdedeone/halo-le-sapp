@@ -1,0 +1,146 @@
+/*
+ * Copyright (c) 2014 Ember
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+#include "MySQLDriver.h"
+#include <cppconn/driver.h>
+#include <cppconn/connection.h>
+#include <cppconn/exception.h>
+#include <cppconn/resultset.h>
+#include <cppconn/statement.h>
+#include <cppconn/prepared_statement.h>
+#include <memory>
+#include <sstream>
+
+namespace ember { namespace drivers {
+
+MySQL::MySQL(const std::string& user, const std::string& pass, const std::string& host,
+	unsigned short port, const std::string& db, const std::string& charset) : database(db), username(user), password(pass),
+	charset(charset), dsn(std::string("tcp://" + host + ":" + std::to_string(port))) {
+	driver = get_driver_instance();
+}
+
+sql::Connection* MySQL::open() const {
+	sql::ConnectOptionsMap options;
+	options["hostName"] = dsn;
+	options["userName"] = username;
+	options["password"] = password;
+	options["OPT_RECONNECT"] = true;
+	options["OPT_CHARSET_NAME"] = charset;
+	options["characterSetResults"] = charset;
+	sql::Connection* conn = driver->connect(options);
+	conn->setSchema(database);
+	conn->setAutoCommit(true);
+	return conn;
+}
+
+void MySQL::close(sql::Connection* conn) const {
+	if(!conn->isClosed()) {
+		conn->close();
+	}
+
+	auto conn_cache = locate_cache(conn);
+
+	if(conn_cache) {
+		for(auto stmt : *conn_cache) {
+			stmt.second->close();
+			delete stmt.second;
+		}
+
+		close_cache(conn);
+	}
+
+	delete conn;
+}
+
+//todo - change this interface to bool
+sql::Connection* MySQL::keep_alive(sql::Connection* conn) const try {
+	conn->setAutoCommit(true);
+	std::unique_ptr<sql::Statement> stmt(conn->createStatement());
+	stmt->execute("/* ping */");
+	return conn;
+} catch(sql::SQLException&) {
+	return open();
+}
+
+bool MySQL::clean(sql::Connection* conn) const {
+	return !conn->isClosed();
+}
+
+void MySQL::thread_enter() const {
+	driver->threadInit();
+}
+
+void MySQL::thread_exit() const {
+	driver->threadEnd();
+}
+
+std::string MySQL::name() const {
+	return driver->getName();
+}
+
+std::string MySQL::version() const {
+	std::stringstream ver;
+	ver << driver->getMajorVersion() << "." << driver->getMinorVersion() << "."
+	    << driver->getPatchVersion();
+	return ver.str();
+}
+
+sql::PreparedStatement* MySQL::prepare_cached(sql::Connection* conn, const std::string& key) {
+	auto stmt = lookup_statement(conn, key);
+	
+	if(!stmt) {
+		stmt = conn->prepareStatement(key);
+		cache_statement(conn, key, stmt);
+	}
+
+	return stmt;
+}
+
+sql::PreparedStatement* MySQL::lookup_statement(const sql::Connection* conn, const std::string& key) {
+	auto conn_cache = locate_cache(conn);
+
+	if(!conn_cache) {
+		return nullptr;
+	}
+
+	auto conn_cache_it = conn_cache->find(key);
+	
+	if(conn_cache_it == conn_cache->end()) {
+		return nullptr;
+	}
+
+	return conn_cache_it->second;
+}
+
+void MySQL::cache_statement(const sql::Connection* conn, const std::string& key,
+                            sql::PreparedStatement* value) {
+	std::lock_guard<std::mutex> lock(cache_lock_);
+	cache_[conn][key] = value;
+}
+
+MySQL::QueryCache* MySQL::locate_cache(const sql::Connection* conn) const {
+	std::lock_guard<std::mutex> lock(cache_lock_);
+	auto cache_it = cache_.find(conn);
+
+	if(cache_it == cache_.end()) {
+		return nullptr;
+	}
+
+	return &cache_it->second;
+}
+
+void MySQL::close_cache(const sql::Connection* conn) const {
+	std::lock_guard<std::mutex> lock(cache_lock_);
+	auto cache_it = cache_.find(conn);
+	
+	if(cache_it != cache_.end()) {
+		cache_.erase(cache_it);
+	}
+}
+
+}} // drivers, ember

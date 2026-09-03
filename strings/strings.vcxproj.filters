@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Codefinder">
+      <UniqueIdentifier>{1e74f08d-c7da-4929-81cd-125a72c9d53d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Patch">
+      <UniqueIdentifier>{822f5302-e1d2-4080-8149-71aeae34c335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="globals">
+      <UniqueIdentifier>{4166c2bd-3eaf-4695-8b2e-d27658b8350f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Signatures">
+      <UniqueIdentifier>{180f30c7-7a13-4759-9254-be2fc8d6a491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapCache">
+      <UniqueIdentifier>{9fabe840-4a24-4451-a314-ab04ec1a83c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomLoad">
+      <UniqueIdentifier>{7ade4ed7-def3-42b2-ac8e-10357058eebf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetworkClient">
+      <UniqueIdentifier>{0c8c97fc-0ad0-46cb-86db-211982ddc218}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sha">
+      <UniqueIdentifier>{3f85133a-aa85-42f3-8f6e-b4a3b4f7abdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RC6">
+      <UniqueIdentifier>{41dc3e00-2406-423f-b90d-baa1dc27c6bb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codefinder.cpp">
+      <Filter>Codefinder</Filter>
+    </ClCompile>
+    <ClCompile Include="Patch.cpp">
+      <Filter>Patch</Filter>
+    </ClCompile>
+    <ClCompile Include="globals.cpp">
+      <Filter>globals</Filter>
+    </ClCompile>
+    <ClCompile Include="Signatures.cpp">
+      <Filter>Signatures</Filter>
+    </ClCompile>
+    <ClCompile Include="MapCache.cpp">
+      <Filter>MapCache</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkClient.cpp">
+      <Filter>NetworkClient</Filter>
+    </ClCompile>
+    <ClCompile Include="sha256.cpp">
+      <Filter>sha</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomLoad.cpp">
+      <Filter>CustomLoad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RC6\rc6_16.cpp">
+      <Filter>RC6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RC6\rc6_32.cpp">
+      <Filter>RC6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RC6\rc6_64.cpp">
+      <Filter>RC6</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="codefinder.h">
+      <Filter>Codefinder</Filter>
+    </ClInclude>
+    <ClInclude Include="Patch.h">
+      <Filter>Patch</Filter>
+    </ClInclude>
+    <ClInclude Include="globals.h">
+      <Filter>globals</Filter>
+    </ClInclude>
+    <ClInclude Include="Signatures.h">
+      <Filter>Signatures</Filter>
+    </ClInclude>
+    <ClInclude Include="MapCache.h">
+      <Filter>MapCache</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLoad.h">
+      <Filter>CustomLoad</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkClient.h">
+      <Filter>NetworkClient</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkStructs.h">
+      <Filter>NetworkClient</Filter>
+    </ClInclude>
+    <ClInclude Include="sha256.h">
+      <Filter>sha</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RC6\rc6_16.h">
+      <Filter>RC6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RC6\rc6_32.h">
+      <Filter>RC6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RC6\rc6_64.h">
+      <Filter>RC6</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="loader.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Strings.res">
+      <Filter>Resource Files</Filter>
+    </Resource>
+  </ItemGroup>
+</Project>

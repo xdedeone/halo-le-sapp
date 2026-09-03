@@ -1,0 +1,967 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Bans">
+      <UniqueIdentifier>{ccf41033-b672-4f34-b2d1-75e149cf49ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ArgContainer">
+      <UniqueIdentifier>{8eee9a7d-4ce7-43cc-812b-db72b1c8f2cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event">
+      <UniqueIdentifier>{75f7e9b2-9fe3-4867-a05c-769d81519d2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HaloUtilities">
+      <UniqueIdentifier>{7910dfac-97b5-4b74-a3b5-0e6024afe08a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TextUtilities">
+      <UniqueIdentifier>{16485eb9-c4c1-482c-9cdd-53cd8752dca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Locations">
+      <UniqueIdentifier>{9976a9b7-2999-4599-8b8c-63520a1db15b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log">
+      <UniqueIdentifier>{4c06dc17-9dc9-4bea-9d1a-df93ef4070e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapVote">
+      <UniqueIdentifier>{a7ab50f8-23b6-410b-81f5-1fccd1481535}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Replace">
+      <UniqueIdentifier>{c14ed6a1-e3ed-4803-804c-265ad2897ef1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands">
+      <UniqueIdentifier>{7064efee-b23f-40dd-b67e-57ee801de05f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\Base">
+      <UniqueIdentifier>{08ee204e-60b4-486a-8131-03f9a503f47d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\Generic">
+      <UniqueIdentifier>{296a7101-b7fa-46b1-ada2-74d318a0d04c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\Player">
+      <UniqueIdentifier>{3755c9c9-a1cf-4fca-b608-f74b785c0e86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mapcycle">
+      <UniqueIdentifier>{b0c7edfc-1187-44c3-9e8d-787d541d9560}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Alias">
+      <UniqueIdentifier>{61d8ee9b-0bbd-41c8-8363-2db3bec9751e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetworkClient">
+      <UniqueIdentifier>{29928063-921b-44ca-9379-f5ca35248be5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Locker">
+      <UniqueIdentifier>{7c608222-a416-45ba-9603-27e9c8e048d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StringCompare">
+      <UniqueIdentifier>{c42785f9-1022-47d9-b738-b6173cdcaff2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threads">
+      <UniqueIdentifier>{ad2a1fb3-93e5-4def-a1de-1bea92cf930c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LuaHandler">
+      <UniqueIdentifier>{20341a93-4d8e-46c7-9251-7519b075ae60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="7z">
+      <UniqueIdentifier>{6b7bcb24-b788-4883-9748-3efe9ddf0591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetworkThread">
+      <UniqueIdentifier>{7ec2cdd6-8b79-440e-b01e-fb9a387b4008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MiscellaneousFunctions">
+      <UniqueIdentifier>{3838a220-19a1-43cd-8b8a-4f7db2b3c956}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Prefs">
+      <UniqueIdentifier>{4dec2611-5b70-4c2b-9626-832e5e9ee990}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides">
+      <UniqueIdentifier>{be16841a-ce22-464b-aae7-3b873f4e9d19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patcher">
+      <UniqueIdentifier>{acd39070-c03c-4660-962e-4093baca2fb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patcher\Codefinder">
+      <UniqueIdentifier>{f04d31b1-3c94-4d10-a0d2-fa1d8ae04b86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patcher\Signatures">
+      <UniqueIdentifier>{d1a9ac3a-b822-4488-8231-d1159cee51a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches">
+      <UniqueIdentifier>{e6cfe80c-6ec0-4bb1-bd73-8bc887085425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ThreadCycleFix">
+      <UniqueIdentifier>{fe94aabe-b488-4eb6-ab4f-72cae211db08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\TeamBalance">
+      <UniqueIdentifier>{f752416e-8592-4f81-a79e-de7d1ebdd18a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\MapLoader">
+      <UniqueIdentifier>{e4cef09c-b4f4-4c31-b904-1077b3d19c0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\NoLead">
+      <UniqueIdentifier>{15d179d4-63d7-4351-9b61-32be30b7ffed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\MultiTeamVehicles">
+      <UniqueIdentifier>{745c1937-08e5-439c-a0fa-26efa9d7e37b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\VehicleRespawnHandler">
+      <UniqueIdentifier>{c04ab9f8-87ee-4c58-99f9-fe649b516971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\Chat">
+      <UniqueIdentifier>{1ab998e7-8b13-4d69-b7fb-bbd01a75ae94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ConsolePatch">
+      <UniqueIdentifier>{a38bc094-7a66-441e-8622-4ec25878295e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\AimbotScan">
+      <UniqueIdentifier>{3125a3c3-cab1-4c15-bd58-605f2dff62c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\CDKeyCheck">
+      <UniqueIdentifier>{ee001673-f819-4467-b82b-92ad6d6473c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\NetworkHook">
+      <UniqueIdentifier>{450cec55-c4bb-47b0-bc90-ed5645448947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\GSQueryPatch">
+      <UniqueIdentifier>{18c9eabd-2823-4d94-9d30-b7c16def3f7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Addresses">
+      <UniqueIdentifier>{f7eb857a-0d9d-4747-9939-eece7b769e7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Admin Management">
+      <UniqueIdentifier>{1623011e-49ee-4fd6-bf5a-73cb0c50f593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Admin Management\OnlineAdmins">
+      <UniqueIdentifier>{96298e43-419e-491e-ab35-7816ac7d6a87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Admin Management\Admins v2">
+      <UniqueIdentifier>{fbefef2e-2ff6-4ad4-a4b6-70800ff514f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Admin Management\Admins v1">
+      <UniqueIdentifier>{c72c16a5-8a58-42f4-a6e7-bc44cd0da778}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Management">
+      <UniqueIdentifier>{7f9cafd2-34ec-4ed9-8b05-83ac436de2f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\EventScan">
+      <UniqueIdentifier>{aaa6925b-5632-426d-933f-6914fdcc63a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ObjectInteractions">
+      <UniqueIdentifier>{e1addde0-1bdf-423a-8a5b-e3480ffd0671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\VehicleEnter-Exit">
+      <UniqueIdentifier>{fdc5ea04-c55a-4181-b400-d829c695cab6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\WeaponPickup-Drop">
+      <UniqueIdentifier>{788b0b3b-d8d3-4bec-a6b8-3a413de2872a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\GameStart-End">
+      <UniqueIdentifier>{85f6a169-7058-4abb-b64a-7124bce6293c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\Teleport">
+      <UniqueIdentifier>{9c6240af-57a7-4fe1-8f56-6ab0ec0ccb60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\Assist">
+      <UniqueIdentifier>{113454c0-b290-4f95-b448-db595f97ac67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\Killed">
+      <UniqueIdentifier>{d6febc23-299e-47d4-9729-1bcf7fc5e943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\Spawn">
+      <UniqueIdentifier>{51b19744-ad2a-437b-9462-0ba01e011a0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\TeamChange">
+      <UniqueIdentifier>{69c8be0b-16a9-4d02-83e7-98ce73d7404e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\UnloadHook">
+      <UniqueIdentifier>{6141c0fc-ea6a-4df7-beb6-de8e8e1d4cee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\HaloThreadHook">
+      <UniqueIdentifier>{f21e036d-789c-4423-9a51-b4f8eda51a07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\Rcon">
+      <UniqueIdentifier>{741ca092-61d5-4f19-9cef-f2e89f6bce50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\MapCheckAndExecute">
+      <UniqueIdentifier>{2d5118e4-b4d8-484a-8de6-070c972e390e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ConsolePrintHook">
+      <UniqueIdentifier>{240f61cb-39d9-4506-9e7a-b2108057b669}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ObjectCreation">
+      <UniqueIdentifier>{758dc7f3-89f1-465d-85f7-d336bbc1a604}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\PlayerQuitKillFix">
+      <UniqueIdentifier>{55c54a71-55db-48e6-bbac-c3fd064702eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\PlayerJoin-Leave">
+      <UniqueIdentifier>{cabaf8b7-fb18-4d09-92e0-a55f9e5fd4dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ClientUpdateFixes">
+      <UniqueIdentifier>{f6d28fbc-fae0-4bab-8221-bfed2a41ef36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\BlockCheatSpawns">
+      <UniqueIdentifier>{c904fd47-e99e-41e6-be25-117ef914fc1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetworkEvents">
+      <UniqueIdentifier>{cce064f2-c813-43d0-98c8-9a06906e7710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\Score">
+      <UniqueIdentifier>{7be55ae4-2fec-4d17-8e63-b948b79afec3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\PingUpdate">
+      <UniqueIdentifier>{990ff2ba-6d4e-41f2-9746-2d952a72743b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{7427495c-55ac-4fe2-92d8-5701b4e3b338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RemoteConsole">
+      <UniqueIdentifier>{a1699882-3e82-452a-86fa-188d473db9d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Json">
+      <UniqueIdentifier>{3f522f61-5800-443d-a37d-8a7c1f06978c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\HillTimer">
+      <UniqueIdentifier>{170c2b3e-aeba-4e4d-a98b-8a55c4141cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\TabCompletion">
+      <UniqueIdentifier>{91323d12-4c52-4b8b-a636-782cdef08c98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\DamageApplicationHook">
+      <UniqueIdentifier>{1b8e9533-59ac-45a1-ab27-9ebfa0c6b71d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\MapReset">
+      <UniqueIdentifier>{6ef94ac1-3d87-4e45-8df5-70dbe41cbdaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CommandExecuter">
+      <UniqueIdentifier>{9367ff61-caac-4a8c-8c41-b3682e4b683c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Areas">
+      <UniqueIdentifier>{076ff21c-4aa1-4510-95b3-162b933b252d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SystemMonitor">
+      <UniqueIdentifier>{91a65e3d-2755-43ba-a1d0-89ecda0c79b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ObjectRespawn">
+      <UniqueIdentifier>{a8aab2fa-7e8a-4e7b-8d8b-54a4e72cbd01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ComboFix">
+      <UniqueIdentifier>{ff1938b1-5284-45eb-bdf0-b3fc76cd26f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\MotdHook">
+      <UniqueIdentifier>{c37f4b2d-4ff8-416b-9054-e967b25c70f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\Stick">
+      <UniqueIdentifier>{bc7637bc-28a3-4b64-ae7b-862f857bed88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ObjectSyncCleanup">
+      <UniqueIdentifier>{03de292d-0299-4ad2-bdcd-a44b2615e9ad}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GenericCommand.h">
+      <Filter>Commands\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseCommand.h">
+      <Filter>Commands\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCommand.h">
+      <Filter>Commands\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Admins.h">
+      <Filter>Admin Management\Admins v2</Filter>
+    </ClInclude>
+    <ClInclude Include="UserList.h">
+      <Filter>Admin Management\Admins v1</Filter>
+    </ClInclude>
+    <ClInclude Include="rcon.h">
+      <Filter>Assembly Code Overrides\Patches\Rcon</Filter>
+    </ClInclude>
+    <ClInclude Include="bans.h">
+      <Filter>Bans</Filter>
+    </ClInclude>
+    <ClInclude Include="chat.h">
+      <Filter>Assembly Code Overrides\Patches\Chat</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgContainer.h">
+      <Filter>ArgContainer</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="HaloUtilities.h">
+      <Filter>HaloUtilities</Filter>
+    </ClInclude>
+    <ClInclude Include="TextUtilities.h">
+      <Filter>TextUtilities</Filter>
+    </ClInclude>
+    <ClInclude Include="codefinder.h">
+      <Filter>Assembly Code Overrides\Patcher\Codefinder</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsolePatch.h">
+      <Filter>Assembly Code Overrides\Patches\ConsolePatch</Filter>
+    </ClInclude>
+    <ClInclude Include="Locations.h">
+      <Filter>Locations</Filter>
+    </ClInclude>
+    <ClInclude Include="LogThread.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="MapVote.h">
+      <Filter>MapVote</Filter>
+    </ClInclude>
+    <ClInclude Include="signatures.h">
+      <Filter>Assembly Code Overrides\Patcher\Signatures</Filter>
+    </ClInclude>
+    <ClInclude Include="Replace.h">
+      <Filter>Replace</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandAssignWeapon.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandBan.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandGod.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandInvisible.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandKick.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandKill.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLag.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandIpBan.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandIp.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandPlayerDescription.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandSpeed.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandStats.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandSwitchTeam.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandTeleport.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandTextban.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandVehicleEnter.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandVehicleExit.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandWeaponDelete.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandAmmo.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandSpawnObject.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandReload.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandPrefs.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandMisc.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandMapVote.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLocations.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLists.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandHalo.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandEvent.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandBalanceTeams.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandAdminV2.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandAdminV1.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandBoost.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="OnlineAdmins.h">
+      <Filter>Admin Management\OnlineAdmins</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomCommand.h">
+      <Filter>Commands\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkHook.h">
+      <Filter>Assembly Code Overrides\Patches\NetworkHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapcycle.h">
+      <Filter>Mapcycle</Filter>
+    </ClInclude>
+    <ClInclude Include="AimbotScan.h">
+      <Filter>Assembly Code Overrides\Patches\AimbotScan</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandMapcycle.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="AliasThread.h">
+      <Filter>Alias</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandAlias.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="StringCompare.h">
+      <Filter>StringCompare</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandDisableObject.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="NoLead.h">
+      <Filter>Assembly Code Overrides\Patches\NoLead</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkClient.h">
+      <Filter>NetworkClient</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadCycleFix.h">
+      <Filter>Assembly Code Overrides\Patches\ThreadCycleFix</Filter>
+    </ClInclude>
+    <ClInclude Include="Locker.h">
+      <Filter>Locker</Filter>
+    </ClInclude>
+    <ClInclude Include="CDKeyCheck.h">
+      <Filter>Assembly Code Overrides\Patches\CDKeyCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="MapLoader.h">
+      <Filter>Assembly Code Overrides\Patches\MapLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLoadMap.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandChangeColor.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkStructs.h">
+      <Filter>NetworkClient</Filter>
+    </ClInclude>
+    <ClInclude Include="mtv.h">
+      <Filter>Assembly Code Overrides\Patches\MultiTeamVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandSay.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandAreas.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandQuery.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandTeamUp.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="Threads.h">
+      <Filter>Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandVar.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaHandler.h">
+      <Filter>LuaHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="Events.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLua.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="7z_dec.h">
+      <Filter>7z</Filter>
+    </ClInclude>
+    <ClInclude Include="VehicleRespawnHandler.h">
+      <Filter>Assembly Code Overrides\Patches\VehicleRespawnHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManagement.h">
+      <Filter>Object Management</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkThread.h">
+      <Filter>NetworkThread</Filter>
+    </ClInclude>
+    <ClInclude Include="Patcher.h">
+      <Filter>Assembly Code Overrides\Patcher</Filter>
+    </ClInclude>
+    <ClInclude Include="TeamBalance.h">
+      <Filter>Assembly Code Overrides\Patches\TeamBalance</Filter>
+    </ClInclude>
+    <ClInclude Include="MiscellaneousFunctions.h">
+      <Filter>MiscellaneousFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefs.h">
+      <Filter>Prefs</Filter>
+    </ClInclude>
+    <ClInclude Include="Patches.h">
+      <Filter>Assembly Code Overrides\Patches</Filter>
+    </ClInclude>
+    <ClInclude Include="Addresses.h">
+      <Filter>Assembly Code Overrides\Addresses</Filter>
+    </ClInclude>
+    <ClInclude Include="GSQueryPatch.h">
+      <Filter>Assembly Code Overrides\Patches\GSQueryPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3f.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EventScan.h">
+      <Filter>Assembly Code Overrides\Patches\EventScan</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectInteractions.h">
+      <Filter>Assembly Code Overrides\Patches\ObjectInteractions</Filter>
+    </ClInclude>
+    <ClInclude Include="VehicleEnter-Exit.h">
+      <Filter>Assembly Code Overrides\Patches\VehicleEnter-Exit</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponPickup-Drop.h">
+      <Filter>Assembly Code Overrides\Patches\WeaponPickup-Drop</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStart-End.h">
+      <Filter>Assembly Code Overrides\Patches\GameStart-End</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerJoin-Leave.h">
+      <Filter>Assembly Code Overrides\Patches\PlayerJoin-Leave</Filter>
+    </ClInclude>
+    <ClInclude Include="Teleport.h">
+      <Filter>Assembly Code Overrides\Patches\Teleport</Filter>
+    </ClInclude>
+    <ClInclude Include="Assist.h">
+      <Filter>Assembly Code Overrides\Patches\Assist</Filter>
+    </ClInclude>
+    <ClInclude Include="Killed.h">
+      <Filter>Assembly Code Overrides\Patches\Killed</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawn.h">
+      <Filter>Assembly Code Overrides\Patches\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="TeamChange.h">
+      <Filter>Assembly Code Overrides\Patches\TeamChange</Filter>
+    </ClInclude>
+    <ClInclude Include="UnloadHook.h">
+      <Filter>Assembly Code Overrides\Patches\UnloadHook</Filter>
+    </ClInclude>
+    <ClInclude Include="HaloThreadHook.h">
+      <Filter>Assembly Code Overrides\Patches\HaloThreadHook</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandVehicleDelete.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandDropWeapon.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandReport.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="MapCheckAndExecute.h">
+      <Filter>Assembly Code Overrides\Patches\MapCheckAndExecute</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsolePrintHook.h">
+      <Filter>Assembly Code Overrides\Patches\ConsolePrintHook</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandSetAdmin.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectCreation.h">
+      <Filter>Assembly Code Overrides\Patches\ObjectCreation</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerQuitKillFix.h">
+      <Filter>Assembly Code Overrides\Patches\PlayerQuitKillFix</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientUpdateFixes.h">
+      <Filter>Assembly Code Overrides\Patches\ClientUpdateFixes</Filter>
+    </ClInclude>
+    <ClInclude Include="APIFunctions.h">
+      <Filter>LuaHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockCheatSpawns.h">
+      <Filter>Assembly Code Overrides\Patches\BlockCheatSpawns</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkEvents.h">
+      <Filter>NetworkEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandNetworkEvents.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="Score.h">
+      <Filter>Assembly Code Overrides\Patches\Score</Filter>
+    </ClInclude>
+    <ClInclude Include="PingUpdate.h">
+      <Filter>Assembly Code Overrides\Patches\PingUpdate</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteConsoleNetworking.h">
+      <Filter>RemoteConsole</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteConsole.h">
+      <Filter>RemoteConsole</Filter>
+    </ClInclude>
+    <ClInclude Include="HillTimer.h">
+      <Filter>Assembly Code Overrides\Patches\HillTimer</Filter>
+    </ClInclude>
+    <ClInclude Include="TabCompletion.h">
+      <Filter>Assembly Code Overrides\Patches\TabCompletion</Filter>
+    </ClInclude>
+    <ClInclude Include="DamageApplicationHook.h">
+      <Filter>Assembly Code Overrides\Patches\DamageApplicationHook</Filter>
+    </ClInclude>
+    <ClInclude Include="MapReset.h">
+      <Filter>Assembly Code Overrides\Patches\MapReset</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandFactory.h">
+      <Filter>Commands\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandEnviroment.h">
+      <Filter>Commands\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandExecuter.h">
+      <Filter>CommandExecuter</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomCommandFactory.h">
+      <Filter>Commands\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandRconPrint.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json-forwards.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="Areas.h">
+      <Filter>Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemMonitor.h">
+      <Filter>SystemMonitor</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectRespawn.h">
+      <Filter>Assembly Code Overrides\Patches\ObjectRespawn</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandBlockObject.h">
+      <Filter>Commands\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="ComboFix.h">
+      <Filter>Assembly Code Overrides\Patches\ComboFix</Filter>
+    </ClInclude>
+    <ClInclude Include="MotdHook.h">
+      <Filter>Assembly Code Overrides\Patches\MotdHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Stick.h">
+      <Filter>Assembly Code Overrides\Patches\Stick</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandCustom.h">
+      <Filter>Commands\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectSyncCleanup.h">
+      <Filter>Assembly Code Overrides\Patches\ObjectSyncCleanup</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Admins.cpp">
+      <Filter>Admin Management\Admins v2</Filter>
+    </ClCompile>
+    <ClCompile Include="UserList.cpp">
+      <Filter>Admin Management\Admins v1</Filter>
+    </ClCompile>
+    <ClCompile Include="rcon.cpp">
+      <Filter>Assembly Code Overrides\Patches\Rcon</Filter>
+    </ClCompile>
+    <ClCompile Include="bans.cpp">
+      <Filter>Bans</Filter>
+    </ClCompile>
+    <ClCompile Include="chat.cpp">
+      <Filter>Assembly Code Overrides\Patches\Chat</Filter>
+    </ClCompile>
+    <ClCompile Include="ArgContainer.cpp">
+      <Filter>ArgContainer</Filter>
+    </ClCompile>
+    <ClCompile Include="HaloUtilities.cpp">
+      <Filter>HaloUtilities</Filter>
+    </ClCompile>
+    <ClCompile Include="TextUtilities.cpp">
+      <Filter>TextUtilities</Filter>
+    </ClCompile>
+    <ClCompile Include="codefinder.cpp">
+      <Filter>Assembly Code Overrides\Patcher\Codefinder</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsolePatch.cpp">
+      <Filter>Assembly Code Overrides\Patches\ConsolePatch</Filter>
+    </ClCompile>
+    <ClCompile Include="Locations.cpp">
+      <Filter>Locations</Filter>
+    </ClCompile>
+    <ClCompile Include="LogThread.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="MapVote.cpp">
+      <Filter>MapVote</Filter>
+    </ClCompile>
+    <ClCompile Include="signatures.cpp">
+      <Filter>Assembly Code Overrides\Patcher\Signatures</Filter>
+    </ClCompile>
+    <ClCompile Include="Replace.cpp">
+      <Filter>Replace</Filter>
+    </ClCompile>
+    <ClCompile Include="OnlineAdmins.cpp">
+      <Filter>Admin Management\OnlineAdmins</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomCommand.cpp">
+      <Filter>Commands\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericCommand.cpp">
+      <Filter>Commands\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCommand.cpp">
+      <Filter>Commands\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkHook.cpp">
+      <Filter>Assembly Code Overrides\Patches\NetworkHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Mapcycle.cpp">
+      <Filter>Mapcycle</Filter>
+    </ClCompile>
+    <ClCompile Include="AimbotScan.cpp">
+      <Filter>Assembly Code Overrides\Patches\AimbotScan</Filter>
+    </ClCompile>
+    <ClCompile Include="AliasThread.cpp">
+      <Filter>Alias</Filter>
+    </ClCompile>
+    <ClCompile Include="StringCompare.cpp">
+      <Filter>StringCompare</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkClient.cpp">
+      <Filter>NetworkClient</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadCycleFix.cpp">
+      <Filter>Assembly Code Overrides\Patches\ThreadCycleFix</Filter>
+    </ClCompile>
+    <ClCompile Include="CDKeyCheck.cpp">
+      <Filter>Assembly Code Overrides\Patches\CDKeyCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="MapLoader.cpp">
+      <Filter>Assembly Code Overrides\Patches\MapLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="mtv.cpp">
+      <Filter>Assembly Code Overrides\Patches\MultiTeamVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="Threads.cpp">
+      <Filter>Threads</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaHandler.cpp">
+      <Filter>LuaHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="7z_dec.cpp">
+      <Filter>7z</Filter>
+    </ClCompile>
+    <ClCompile Include="VehicleRespawnHandler.cpp">
+      <Filter>Assembly Code Overrides\Patches\VehicleRespawnHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManagement.cpp">
+      <Filter>Object Management</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkThread.cpp">
+      <Filter>NetworkThread</Filter>
+    </ClCompile>
+    <ClCompile Include="Patcher.cpp">
+      <Filter>Assembly Code Overrides\Patcher</Filter>
+    </ClCompile>
+    <ClCompile Include="TeamBalance.cpp">
+      <Filter>Assembly Code Overrides\Patches\TeamBalance</Filter>
+    </ClCompile>
+    <ClCompile Include="MiscellaneousFunctions.cpp">
+      <Filter>MiscellaneousFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="Patches.cpp">
+      <Filter>Assembly Code Overrides\Patches</Filter>
+    </ClCompile>
+    <ClCompile Include="GSQueryPatch.cpp">
+      <Filter>Assembly Code Overrides\Patches\GSQueryPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="EventScan.cpp">
+      <Filter>Assembly Code Overrides\Patches\EventScan</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectInteractions.cpp">
+      <Filter>Assembly Code Overrides\Patches\ObjectInteractions</Filter>
+    </ClCompile>
+    <ClCompile Include="VehicleEnter-Exit.cpp">
+      <Filter>Assembly Code Overrides\Patches\VehicleEnter-Exit</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponPickup-Drop.cpp">
+      <Filter>Assembly Code Overrides\Patches\WeaponPickup-Drop</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStart-End.cpp">
+      <Filter>Assembly Code Overrides\Patches\GameStart-End</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerJoin-Leave.cpp">
+      <Filter>Assembly Code Overrides\Patches\PlayerJoin-Leave</Filter>
+    </ClCompile>
+    <ClCompile Include="Teleport.cpp">
+      <Filter>Assembly Code Overrides\Patches\Teleport</Filter>
+    </ClCompile>
+    <ClCompile Include="Assist.cpp">
+      <Filter>Assembly Code Overrides\Patches\Assist</Filter>
+    </ClCompile>
+    <ClCompile Include="Killed.cpp">
+      <Filter>Assembly Code Overrides\Patches\Killed</Filter>
+    </ClCompile>
+    <ClCompile Include="Spawn.cpp">
+      <Filter>Assembly Code Overrides\Patches\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="TeamChange.cpp">
+      <Filter>Assembly Code Overrides\Patches\TeamChange</Filter>
+    </ClCompile>
+    <ClCompile Include="UnloadHook.cpp">
+      <Filter>Assembly Code Overrides\Patches\UnloadHook</Filter>
+    </ClCompile>
+    <ClCompile Include="HaloThreadHook.cpp">
+      <Filter>Assembly Code Overrides\Patches\HaloThreadHook</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Addresses.cpp">
+      <Filter>Assembly Code Overrides\Addresses</Filter>
+    </ClCompile>
+    <ClCompile Include="MapCheckAndExecute.cpp">
+      <Filter>Assembly Code Overrides\Patches\MapCheckAndExecute</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsolePrintHook.cpp">
+      <Filter>Assembly Code Overrides\Patches\ConsolePrintHook</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectCreation.cpp">
+      <Filter>Assembly Code Overrides\Patches\ObjectCreation</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerQuitKillFix.cpp">
+      <Filter>Assembly Code Overrides\Patches\PlayerQuitKillFix</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientUpdateFixes.cpp">
+      <Filter>Assembly Code Overrides\Patches\ClientUpdateFixes</Filter>
+    </ClCompile>
+    <ClCompile Include="APIFunctions.cpp">
+      <Filter>LuaHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockCheatSpawns.cpp">
+      <Filter>Assembly Code Overrides\Patches\BlockCheatSpawns</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkEvents.cpp">
+      <Filter>NetworkEvents</Filter>
+    </ClCompile>
+    <ClCompile Include="Score.cpp">
+      <Filter>Assembly Code Overrides\Patches\Score</Filter>
+    </ClCompile>
+    <ClCompile Include="PingUpdate.cpp">
+      <Filter>Assembly Code Overrides\Patches\PingUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="NoLead.cpp">
+      <Filter>Assembly Code Overrides\Patches\NoLead</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteConsoleNetworking.cpp">
+      <Filter>RemoteConsole</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteConsole.cpp">
+      <Filter>RemoteConsole</Filter>
+    </ClCompile>
+    <ClCompile Include="HillTimer.cpp">
+      <Filter>Assembly Code Overrides\Patches\HillTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="TabCompletion.cpp">
+      <Filter>Assembly Code Overrides\Patches\TabCompletion</Filter>
+    </ClCompile>
+    <ClCompile Include="DamageApplicationHook.cpp">
+      <Filter>Assembly Code Overrides\Patches\DamageApplicationHook</Filter>
+    </ClCompile>
+    <ClCompile Include="MapReset.cpp">
+      <Filter>Assembly Code Overrides\Patches\MapReset</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandFactory.cpp">
+      <Filter>Commands\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandEnviroment.cpp">
+      <Filter>Commands\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandExecuter.cpp">
+      <Filter>CommandExecuter</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomCommandFactory.cpp">
+      <Filter>Commands\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="jsoncpp.cpp">
+      <Filter>Json</Filter>
+    </ClCompile>
+    <ClCompile Include="Areas.cpp">
+      <Filter>Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemMonitor.cpp">
+      <Filter>SystemMonitor</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectRespawn.cpp">
+      <Filter>Assembly Code Overrides\Patches\ObjectRespawn</Filter>
+    </ClCompile>
+    <ClCompile Include="ComboFix.cpp">
+      <Filter>Assembly Code Overrides\Patches\ComboFix</Filter>
+    </ClCompile>
+    <ClCompile Include="MotdHook.cpp">
+      <Filter>Assembly Code Overrides\Patches\MotdHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Stick.cpp">
+      <Filter>Assembly Code Overrides\Patches\Stick</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectSyncCleanup.cpp">
+      <Filter>Assembly Code Overrides\Patches\ObjectSyncCleanup</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefs.cpp">
+      <Filter>Prefs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="sapp.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

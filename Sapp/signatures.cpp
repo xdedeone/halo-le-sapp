@@ -1,0 +1,324 @@
+#include "signatures.h"
+
+#include "SuperHeader.h" // for the HPC ifdef
+
+//const char* const InitServerStructCode1 = "535657BE????????33DB33C0B9C40400008BFEF3AB";
+//
+//const char* const InitServerStructCode2 = "E8????????668B0D????????66890D";
+//
+//const char* const InitServerStructCode3 = "E8????????84C0751168????????E8????????83C40433F6EB0A";
+
+//const char* const LogFunctionCode = "A0????????81EC0008000084C074??8B8424????????8A88????????84C974??8B9424????????8D8C24????????";
+
+//const char* const LagFixCode = "E8????????E8????????83FD01";
+
+const char* const ptrMSDataSign = "6A015268????????68????????515068????????E8";
+
+//const char* const recvfromSign = "5051C744242010000000E8????????8BF083FEFF";
+
+//const char* const sendtoSign = "6A108D95C40000005253508D44244C5051E8????????E8";
+
+const char* const recvfromEndSign = "8BF083FEFF75??E8????????3D46270000";
+
+const char* const FreeLibrarySign = "516800000040FF15????????50FFD683C41057FF15";
+
+const char* const VersionCode = "568B31897424048B71048B4908897424085E";
+
+const char* const VersionString = "A1????????81C2040100008902";
+
+const char* const DNSString = "68??????????E8????????83C4??8D5C24??68FC6C0000";
+
+const char* const GTFolderCode = "33C0B941000000BF????????F3ABAA";
+
+const char* const BanlistCode = "68????????68????????33C0E8????????568D8424????????680002000050";
+
+const char* const HashListCode = "8BC1C1E00405????????4153";
+
+const char* const RconPasswordCode = "BA????????8D9B000000008A014188024284C075F6";
+
+const char* const TeamGameCode = "83EC3853568BF0A0????????84C057";
+
+const char* const BlockTeamChange = "530FB65C2405";
+
+const char* const MapcycleTimeoutCode = "8B0D????????85C97E11DB05";
+
+const char* const TimelimitCode = "8B0D????????83C8FF85C97E17";
+
+const char* const ReloadGametypesCode = "558BEC83E4F8B870300000";
+
+//const char* const MaxPlayersCode = "8B15????????5268????????33C0E8????????83C408C3";
+
+const char* const UnConLogCode = "890D????????B3018D542414A3????????890D????????68????????52";
+
+const char* const ScoreLimitCode = "8B15????????A1????????33C9";
+
+const char* const SlayerScoreTableCode = "5733C0B910000000BF????????F3ABB910000000BF????????F3AB5FC3";
+
+const char* const CTFScoreTableCode = "3AD08904B5????????8BCE7410";
+
+const char* const OddballScoreTableCode = "33C0B951000000BF????????F3AB";
+
+const char* const KingScoreTableCode = "33C0B96B000000BF????????F3AB";
+
+const char* const RaceScoreTableCode = "8B4C2408BA01000000D3E2578B3D????????32C0";
+
+const char* const ScoreTypeCode = "A1????????83E802B951000000";
+
+const char* const PrintCode = "558BEC83E4F881EC1001000056";
+
+const char* const RconPrintCode = "83EC5C6A50508D4C241051E8????????6A006A016A00";
+
+const char* const ObjectTableCode = "8B1D????????83E103F3A48BC88BFD8BF233C0F3A6";
+
+const char* const BaseAddressCode = "A1????????568B35????????8944241857";
+
+const char* const ServerTicksCode = "A1????????8B50148B480C83C40442414E4F89501489480C";
+
+const char* const GameSpeedCode = "D80D????????83EC08D95C2408";
+
+const char* const GravityCode = "D825????????D95C2424D944241C";
+
+const char* const ExecuteCode = "8A0781EC000500003C3B740E";
+
+const char* const ThreadHookCode = "3DC8000000A3????????0F86";
+
+const char* const GetServerCode = "85C0A3????????7431";
+
+const char* const GameStartCode = "C60200E8????????5F5E5D5B59C3";
+
+const char* const GameEndCode = "83EC0C6A006A016A00";
+
+#ifdef HPC
+const char* const GameEndRaceCode = "8D4C24286A1653BAF87F0000";
+#else
+const char* const GameEndRaceCode = "895424286A166A00BAF87F0000";
+#endif
+
+const char* sv_map_reset_Code = "5B68????????33C0";
+
+const char* const RunMapCode = "81EC????????568BF085F657";
+
+const char* const sv_map_Code = "538B58048B00E8????????5B8BCE33C05E";
+
+const char* const MapTableCode = "3B05????????7D248B0D";
+
+const char* const ChatCode = "8B088B1181EC????????5733FF3BD70F85";
+
+const char* const RconHookCode = "894424??75??55B8????????E8????????A1????????55";
+
+const char* const RconContinueCode = "0F85????????8D4424??8D50018DA424000000008A0840";
+
+const char* const RconFinishCode = "84C05574??B8????????E8";
+
+const char* const TeamBalanceCode = "E8????????83C40484C00F85????????0FB6????08";
+
+const char* const EventTeamChangeCode = "E8????????83C4345F5E5B83C41CC3";
+
+const char* const TeamChangeRejecetCode = "B991000000E8????????83C404";
+
+const char* const VehicleRespawnHandlerCode = "83C008D9400CEB12";
+
+const char* const VehicleRespawnPatchCode = "DFE0F6C44175??8BC6E8";
+
+const char* const MultiTeamVehiclesCode = "66398EF00200007504";
+
+const char* const GlobalAllocCode = "8BD883C4048D7B01576A00FF15";
+
+const char* const GlobalReAllocCode = "6A025051FF15";
+
+const char* const GlobalFreeCode = "53FF15????????32C05F5E5B8BE55DC3";
+
+const char* const MemoryLeakFixCode = "BB64000000F3ABE8????????83C40885C0A3";
+
+const char* const ComboFixCode = "3BC17C0966FF8298000000";
+
+const char* const PingPatchCode = "535751FFD083C40C";
+
+const char* const QueryNextMapCode = "68????????56E8????????8B8600080000";
+
+const char* const QueryMapNameCode = "6A008D542414526A006A0081C78400000057";
+
+const char* const QueryPortCode = "4883F8358D7E08";
+
+const char* const ObjectInteractionCode = "5157??????????EB105157??????????EB075157E8????????83C40883C6044B";
+
+const char* const ObjectInteractionVehi = "A1????????8B542404";
+
+const char* const ObjectInteractionOther = "83EC14A1????????8B4834";
+
+//const char* const BulletMagnetFuncCall = "8D5C2440C744242400000000";
+const char* const BulletMagnetFuncCall = "51525350E8????????83C41C8BE8";
+
+//const char* const SplashDamageBeginCode = "8B8424CC0000008B4810";
+
+//const char* const SplashDamageEndCode = "E8????????83C4085F5E5D5B81C4B8000000C3";
+
+const char* const MotdMessageCode = "0FBF400C565750B8";
+
+const char* const MotdCode = "68????????33C0E8C2D0FBFF83C4085F5E5B8BE55DC3";
+
+const char* const TabCompletionAddr = "A3????????750AC705";
+
+const char* const TabCompletionCode = "0FBF15????????68????????6A045255E8";
+
+const char* const PingUpdateIntervalCode = "05B80B00003BF8";
+
+const char* const PingUpdateCode = "8B5424108BB2????????E8????????2BC6";
+
+const char* const ObjectSpawnTimerCode = "6685C974060FBFD96BDB1E03D8";
+
+const char* const DisableLogFormattingCode = "8B4C240481EC00040000";
+
+const char* const ThreadCycleFixCode = "DD05????????DC642410DC1D????????DFE0";
+
+const char* const CDKeyCheckCode1 = "6A0155E8????????83C4085E5D5B";
+
+const char* const CDKeyCheckCode2 = "5055E8????????83C4085E5D5B";
+
+const char* const ConsoleSpamCode = "81FA983A0000760B";
+
+const char* const ConsoleInputCode = "381D????????741CE8????????E8????????381D";
+
+const char* const ClientUpdateCode = "3C018DAC14B0010000";
+
+const char* const ObjectRemoveFuncCode = "568BF2C1FE106685D2577C25";
+
+const char* const RemoveObjectSyncFuncCode = "83EC0C5333C083FFFF56";
+
+const char* const ObjectSyncStructCode = "8B35????????83C60C8BCFE8????????83F8FF";
+
+const char* const ObjectRemoveCode = "E8????????C7460800000000C64602005EC3";
+
+const char* const GameTypePtr = "A1????????83EC1485C00F84";
+
+const char* const EventMJoinCode = "66FF85????00005F5B5EB0015DC3";
+
+const char* const EventMLeaveCode = "88481C88481D88481E88481F66C7000000668948186689481A66FF";
+
+const char* const EventCleanMachines = "FF85????????899D";
+
+const char* const EventPJoinCode = "E8????????8B74241C8B442410";
+
+const char* const AFKCode = "53E8????????83C404663DFFFF";
+
+const char* const EventPreSpawnCode = "68F87F000068????????56";
+
+const char* const EventSpawnCode = "83C40C8B6C2410";
+
+const char* const PlayerQuitKillCode = "8D4C24285551E8";
+
+const char* const ApplyFallDamageCode = "0F85????????D9442418D81D????????DFE0F6C4410F85";
+
+const char* const DamageApplicationCode = "807C24400175";
+
+const char* const EventCTFScoreCode = "8B742418568BC3E8????????578BC6E8";
+
+const char* const EventRallyScoreCode = "83C4085E5B5FA3????????5D83C408C3";
+
+const char* const EventRaceScoreCode = "83C4045E5B5F5D83C408C3";
+
+#ifdef HPC
+const char* const EventKilled = "5250518BD6E8";
+#else
+const char* const EventKilled = "5057518BD6E8";
+#endif
+
+//const char* const EventKilled = "83EC??568BF0A0????????84C00F84";
+//
+//const char* const EventKilledFv1 = "E8????????83C4100FBF4F02"; // unknown
+//
+//const char* const EventKilledFv2 = "E8????????83C41085ED7403896E2C"; // reset, teamswitch
+//
+//const char* const EventKilledFv3 = "E8????????EB1E85D2740985C90F94C0"; // reset, kills, die, etc.
+
+const char* const EventAssist = "66FF86A4000000";
+
+const char* const TeleportCode = "8D54242052508BFE";
+
+const char* const EventWeaponPickup = "C784830803000000000000";
+
+const char* const EventNadePickup = "8D84101E030000FEC18808";
+
+const char* const EventWeaponDrop = "83C8FF89848FF8020000";
+
+const char* const EventVehicleEnter = "33D2668B562A52508B4634E8????????83C408";
+
+const char* const EventVehicleExit = "8D04408B44820839B02403000075088B45F8";
+
+const char* const EventVehicleAutoExit = "8BCA8BD025FFFF00008D04408B748108";
+
+const char* const EventCreatePlayerObject = "8D4C24306A0351E8????????8BF083C41083FEFF";
+
+const char* const EventStick = "8B453833D2668B553E525350";
+
+const char* const BuildChatPacketHook = "8B7C24185733F6E8";
+
+const char* const SetKingTime = "5650C705????????08070000";
+
+const char* const SetKingTimeStart = "A3????????C705????????08070000";
+
+const char* const SetKingTimeReset = "890D????????C705????????08070000";
+
+const char* const addr_ip = "890D????????EB05A3????????8D44240C";
+
+const char* const addr_port = "668B0D????????0BF2C605????????015156";
+
+const char* const md5_update = "8B4C240C538B5C2408";
+
+const char* const md5_final = "83EC0CA1????????5657";
+
+const char* const md5_patch = "33C0B916000000F3AB";
+
+const char* const func_intersect = "81EC380400008B8C244404000053";
+
+const char* const func_buildpacket = "81ECA400000053558BAC24BC00000033DB568BF05733C0";
+
+const char* const func_buildpacket_projwrapper = "68F87F000068????????51E8????????83C40C85C0";
+
+const char* const func_addpackettoqueue = "668B460E8AD0D0EAF6C201";
+
+//const char* const func_addpackettoqueue = "6A036A006A006A0168????????6A018BC3E8????????83C418";
+
+const char* const func_addpackettopqueue = "5153578BF832C033C9";
+
+const char* const addr_tagtable = "516800000040";
+
+const char* const addr_objectbase = "D815????????DFE0F6C4417408DDD8D905????????D9C0D8C9";
+
+const char* const addr_gamestate = "8B1D????????85DB0F94C184C97410";
+
+const char* const func_doinvis = "83FBFF558B6C2408";
+
+const char* const func_createobjectquery = "8B15????????538B5C240C56";
+
+const char* const func_createobject = "81EC1C0200008B0D????????5355";
+
+const char* const func_destroyobject = "8B0D????????8B5134578BF825FFFF00";
+
+const char* const func_playerassignweapon = "83EC08535556576A038BF88BF132DB";
+
+const char* const func_notify_weaponpickup = "83EC1453558B6C242C33C083F9FF56";
+
+const char* const func_dropweapon_1 = "83EC105633C083F9FF57";
+
+const char* const func_dropweapon_2 = "518B0D????????8B513453558B6C24108BC525FFFF0000";
+
+const char* const func_entervehicle = "558BEC81EC88000000A1????????8B503453";
+
+const char* const func_ejectvehicle = "558BEC83E4F881ECDC00000053568BF0";
+
+//const char* const func_onplayerdeath = "83EC74568BF0A0????????84C0";
+
+const char* const func_onplayerdeath = "83EC??568BF0A0????????84C00F84";
+
+const char* const func_actiondeath_1 = "8B??????????8B4A345657";
+
+const char* const func_actiondeath_2 = "83EC2483F8FF53555657";
+
+const char* const func_actiondeath_3 = "8B??????????8B413483EC10535556";
+
+const char* const func_updateammo = "6A2D6A00BAF87F0000";
+
+const char* const func_interactwithpowerup = "A1????????8B50348B442408";
+
+const char* const func_cheat_spawn = "81ECB8000000E8????????83F8FF0F84";

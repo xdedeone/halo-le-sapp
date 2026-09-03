@@ -1,0 +1,54 @@
+/*
+ * Copyright (c) 2014 Ember
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+#pragma once
+
+#include <string>
+#include <unordered_map>
+#include <mutex>
+
+namespace sql {
+
+class Driver;
+class Connection;
+class PreparedStatement;
+
+}
+
+namespace ember { namespace drivers {
+
+class MySQL {
+	typedef std::unordered_map<std::string, sql::PreparedStatement*> QueryCache;
+
+	const std::string dsn, username, password, database, charset;
+	sql::Driver* driver;
+	mutable std::unordered_map<const sql::Connection*, QueryCache> cache_;
+	mutable std::mutex cache_lock_;
+
+	QueryCache* locate_cache(const sql::Connection* conn) const;
+	void close_cache(const sql::Connection* conn) const;
+
+public:
+	MySQL(const std::string& user, const std::string& password, const std::string& host,
+	      unsigned short port, const std::string& db, const std::string& default_charset);
+	
+	sql::Connection* open() const;
+	bool clean(sql::Connection* conn) const;
+	void close(sql::Connection* conn) const;
+	sql::Connection* keep_alive(sql::Connection* conn) const;
+	void thread_enter() const;
+	void thread_exit() const;
+	std::string name() const;
+	std::string version() const;
+	sql::PreparedStatement* prepare_cached(sql::Connection* conn, const std::string& key);
+	sql::PreparedStatement* lookup_statement(const sql::Connection* conn, const std::string& key);
+	void cache_statement(const sql::Connection* conn, const std::string& key,
+	                     sql::PreparedStatement* value);
+};
+
+}} //drivers, ember

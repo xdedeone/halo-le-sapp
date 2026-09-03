@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="PerfMon|Win32">
+      <Configuration>PerfMon</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1931E0D4-F7CE-4865-87C4-A39992C5B83C}</ProjectGuid>
+    <RootNamespace>sapp</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>Sapp</ProjectName>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <InterproceduralOptimization>false</InterproceduralOptimization>
+    <UseIntelIPP>
+    </UseIntelIPP>
+    <UseIntelTBB>
+    </UseIntelTBB>
+    <InstrumentIntelTBB>
+    </InstrumentIntelTBB>
+    <UseIntelMKL>
+    </UseIntelMKL>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='PerfMon|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <InterproceduralOptimization>false</InterproceduralOptimization>
+    <UseIntelIPP />
+    <UseIntelTBB />
+    <InstrumentIntelTBB />
+    <UseIntelMKL />
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <InterproceduralOptimization>false</InterproceduralOptimization>
+    <UseIntelIPP />
+    <UseIntelTBB />
+    <InstrumentIntelTBB />
+    <UseIntelMKL />
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='PerfMon|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='PerfMon|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='PerfMon|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='PerfMon|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='PerfMon|Win32'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='PerfMon|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='PerfMon|Win32'">
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>$(ProjectName)</TargetName>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;TEST_EXPORTS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MinimalRebuild>false</MinimalRebuild>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAsManaged>false</CompileAsManaged>
+      <StringPooling>true</StringPooling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <GlobalOptimizations>true</GlobalOptimizations>
+      <OptimizeForWindowsApplication>false</OptimizeForWindowsApplication>
+      <FlushDenormalResultsToZero>false</FlushDenormalResultsToZero>
+      <EnableMatrixMultiplyLibraryCall>Default</EnableMatrixMultiplyLibraryCall>
+      <Parallelization>false</Parallelization>
+      <UseIntelOptimizedHeaders>false</UseIntelOptimizedHeaders>
+      <GenerateAlternateCodePaths>None</GenerateAlternateCodePaths>
+      <InterproceduralOptimization>NoIPO</InterproceduralOptimization>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <EnableParallelCodeGeneration>
+      </EnableParallelCodeGeneration>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AdditionalIncludeDirectories>$(SolutionDir)Common;$(SolutionDir)3pp\7z\C;$(SolutionDir)3pp\LuaJIT-2.1.0-beta3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;Winmm.lib;notelemetry.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)3pp\LuaJIT-2.1.0-beta3\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <NoEntryPoint>false</NoEntryPoint>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ShowProgress>NotSet</ShowProgress>
+      <Version>
+      </Version>
+      <LinkStatus>
+      </LinkStatus>
+      <CLRUnmanagedCodeCheck>
+      </CLRUnmanagedCodeCheck>
+      <SetChecksum>false</SetChecksum>
+      <ModuleDefinitionFile>sapp.def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>cd $(SolutionDir)3pp\upx394w
+upx.exe --best --lzma "$(SolutionDir)$(Configuration)\sapp.dll"
+cd $(SolutionDir)$(Configuration)
+SappPacker.exe sapp.dll
+copy sapp.dll "D:\Halo CE"</Command>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat""
+
+cd $(SolutionDir)3pp\LuaJIT-2.1.0-beta3\src
+if not exist lua51.lib (
+    msvcbuild.bat static
+) </Command>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='PerfMon|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\7z;$(SolutionDir)\Common;$(SolutionDir)\LuaJIT-2.0.4\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;TEST_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MinimalRebuild>false</MinimalRebuild>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAsManaged>false</CompileAsManaged>
+      <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <GlobalOptimizations>true</GlobalOptimizations>
+      <OptimizeForWindowsApplication>false</OptimizeForWindowsApplication>
+      <FlushDenormalResultsToZero>false</FlushDenormalResultsToZero>
+      <EnableMatrixMultiplyLibraryCall>Default</EnableMatrixMultiplyLibraryCall>
+      <Parallelization>false</Parallelization>
+      <UseIntelOptimizedHeaders>false</UseIntelOptimizedHeaders>
+      <GenerateAlternateCodePaths>None</GenerateAlternateCodePaths>
+      <InterproceduralOptimization>NoIPO</InterproceduralOptimization>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <SDLCheck>
+      </SDLCheck>
+      <EnableParallelCodeGeneration>
+      </EnableParallelCodeGeneration>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Release;$(SolutionDir)\LuaJIT-2.0.4\src;C:\Program Files %28x86%29\Visual Leak Detector\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>sapp.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <NoEntryPoint>false</NoEntryPoint>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ShowProgress>NotSet</ShowProgress>
+      <Version>
+      </Version>
+      <LinkStatus>
+      </LinkStatus>
+      <CLRUnmanagedCodeCheck>
+      </CLRUnmanagedCodeCheck>
+      <SetChecksum>false</SetChecksum>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)Common;$(SolutionDir)3pp\7z\C;$(SolutionDir)3pp\LuaJIT-2.1.0-beta3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;TEST_EXPORTS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAsManaged>false</CompileAsManaged>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <GlobalOptimizations>true</GlobalOptimizations>
+      <OptimizeForWindowsApplication>false</OptimizeForWindowsApplication>
+      <FlushDenormalResultsToZero>false</FlushDenormalResultsToZero>
+      <EnableMatrixMultiplyLibraryCall>Default</EnableMatrixMultiplyLibraryCall>
+      <Parallelization>false</Parallelization>
+      <UseIntelOptimizedHeaders>false</UseIntelOptimizedHeaders>
+      <GenerateAlternateCodePaths>None</GenerateAlternateCodePaths>
+      <InterproceduralOptimization>NoIPO</InterproceduralOptimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)sapp.dll</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)3pp\LuaJIT-2.1.0-beta3\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>sapp.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <NoEntryPoint>false</NoEntryPoint>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>cd $(SolutionDir)$(Configuration)
+copy sapp.dll "D:\Halo CE"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="7z_dec.h" />
+    <ClInclude Include="Addresses.h" />
+    <ClInclude Include="Admins.h" />
+    <ClInclude Include="AimbotScan.h" />
+    <ClInclude Include="AliasThread.h" />
+    <ClInclude Include="APIFunctions.h" />
+    <ClInclude Include="Areas.h" />
+    <ClInclude Include="ComboFix.h" />
+    <ClInclude Include="CommandBlockObject.h" />
+    <ClInclude Include="CommandFactory.h" />
+    <ClInclude Include="CustomCommandFactory.h" />
+    <ClInclude Include="DamageApplicationHook.h" />
+    <ClInclude Include="ArgContainer.h" />
+    <ClInclude Include="Assist.h" />
+    <ClInclude Include="BlockCheatSpawns.h" />
+    <ClInclude Include="CDKeyCheck.h" />
+    <ClInclude Include="ClientUpdateFixes.h" />
+    <ClInclude Include="CommandAreas.h" />
+    <ClInclude Include="CommandChangeColor.h" />
+    <ClInclude Include="CommandDropWeapon.h" />
+    <ClInclude Include="CommandLoadMap.h" />
+    <ClInclude Include="CommandLua.h" />
+    <ClInclude Include="CommandNetworkEvents.h" />
+    <ClInclude Include="CommandQuery.h" />
+    <ClInclude Include="CommandReport.h" />
+    <ClInclude Include="CommandRconPrint.h" />
+    <ClInclude Include="CommandSetAdmin.h" />
+    <ClInclude Include="CommandTeamUp.h" />
+    <ClInclude Include="CommandVar.h" />
+    <ClInclude Include="ConsolePrintHook.h" />
+    <ClInclude Include="Events.h" />
+    <ClInclude Include="GameStart-End.h" />
+    <ClInclude Include="HillTimer.h" />
+    <ClInclude Include="json\json-forwards.h" />
+    <ClInclude Include="json\json.h" />
+    <ClInclude Include="Killed.h" />
+    <ClInclude Include="Locker.h" />
+    <ClInclude Include="LuaHandler.h" />
+    <ClInclude Include="MapLoader.h" />
+    <ClInclude Include="MapReset.h" />
+    <ClInclude Include="MotdHook.h" />
+    <ClInclude Include="ObjectRespawn.h" />
+    <ClInclude Include="ObjectSyncCleanup.h" />
+    <ClInclude Include="PingUpdate.h" />
+    <ClInclude Include="RemoteConsole.h" />
+    <ClInclude Include="RemoteConsoleNetworking.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Score.h" />
+    <ClInclude Include="MiscellaneousFunctions.h" />
+    <ClInclude Include="mtv.h" />
+    <ClInclude Include="NetworkClient.h" />
+    <ClInclude Include="NetworkThread.h" />
+    <ClInclude Include="bans.h" />
+    <ClInclude Include="chat.h" />
+    <ClInclude Include="CommandAlias.h" />
+    <ClInclude Include="CommandAmmo.h" />
+    <ClInclude Include="CommandAssignWeapon.h" />
+    <ClInclude Include="CommandDisableObject.h" />
+    <ClInclude Include="CommandInvisible.h" />
+    <ClInclude Include="CommandLag.h" />
+    <ClInclude Include="CommandLocations.h" />
+    <ClInclude Include="CommandBoost.h" />
+    <ClInclude Include="CommandMapcycle.h" />
+    <ClInclude Include="CommandWeaponDelete.h" />
+    <ClInclude Include="CommandReload.h" />
+    <ClInclude Include="CommandSpawnObject.h" />
+    <ClInclude Include="CommandVehicleDelete.h" />
+    <ClInclude Include="CommandVehicleEnter.h" />
+    <ClInclude Include="ConsolePatch.h" />
+    <ClInclude Include="CustomCommand.h" />
+    <ClInclude Include="CommandExecuter.h" />
+    <ClInclude Include="Locations.h" />
+    <ClInclude Include="Mapcycle.h" />
+    <ClInclude Include="NetworkHook.h" />
+    <ClInclude Include="NetworkStructs.h" />
+    <ClInclude Include="ObjectCreation.h" />
+    <ClInclude Include="ObjectInteractions.h" />
+    <ClInclude Include="OnlineAdmins.h" />
+    <ClInclude Include="Patcher.h" />
+    <ClInclude Include="ObjectManagement.h" />
+    <ClInclude Include="GSQueryPatch.h" />
+    <ClInclude Include="Patches.h" />
+    <ClInclude Include="PlayerJoin-Leave.h" />
+    <ClInclude Include="PlayerQuitKillFix.h" />
+    <ClInclude Include="Prefs.h" />
+    <ClInclude Include="rcon.h" />
+    <ClInclude Include="NoLead.h" />
+    <ClInclude Include="Replace.h" />
+    <ClInclude Include="EventScan.h" />
+    <ClInclude Include="codefinder.h" />
+    <ClInclude Include="CommandEnviroment.h" />
+    <ClInclude Include="CommandAdminV1.h" />
+    <ClInclude Include="CommandAdminV2.h" />
+    <ClInclude Include="CommandBalanceTeams.h" />
+    <ClInclude Include="CommandBan.h" />
+    <ClInclude Include="BaseCommand.h" />
+    <ClInclude Include="CommandEvent.h" />
+    <ClInclude Include="GenericCommand.h" />
+    <ClInclude Include="CommandGod.h" />
+    <ClInclude Include="CommandHalo.h" />
+    <ClInclude Include="CommandIp.h" />
+    <ClInclude Include="CommandIpBan.h" />
+    <ClInclude Include="CommandKick.h" />
+    <ClInclude Include="CommandKill.h" />
+    <ClInclude Include="CommandLists.h" />
+    <ClInclude Include="CommandMapVote.h" />
+    <ClInclude Include="CommandMisc.h" />
+    <ClInclude Include="CommandPrefs.h" />
+    <ClInclude Include="CommandCustom.h" />
+    <ClInclude Include="CommandStats.h" />
+    <ClInclude Include="CommandPlayerDescription.h" />
+    <ClInclude Include="CommandSay.h" />
+    <ClInclude Include="CommandSpeed.h" />
+    <ClInclude Include="CommandSwitchTeam.h" />
+    <ClInclude Include="CommandTeleport.h" />
+    <ClInclude Include="CommandTextban.h" />
+    <ClInclude Include="CommandVehicleExit.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="Spawn.h" />
+    <ClInclude Include="Stick.h" />
+    <ClInclude Include="SuperHeader.h" />
+    <ClInclude Include="HaloUtilities.h" />
+    <ClInclude Include="LogThread.h" />
+    <ClInclude Include="MapVote.h" />
+    <ClInclude Include="PlayerCommand.h" />
+    <ClInclude Include="NetworkEvents.h" />
+    <ClInclude Include="HaloThreadHook.h" />
+    <ClInclude Include="signatures.h" />
+    <ClInclude Include="MapCheckAndExecute.h" />
+    <ClInclude Include="SystemMonitor.h" />
+    <ClInclude Include="TabCompletion.h" />
+    <ClInclude Include="TeamBalance.h" />
+    <ClInclude Include="TeamChange.h" />
+    <ClInclude Include="Teleport.h" />
+    <ClInclude Include="TextUtilities.h" />
+    <ClInclude Include="ThreadCycleFix.h" />
+    <ClInclude Include="Threads.h" />
+    <ClInclude Include="UnloadHook.h" />
+    <ClInclude Include="UserList.h" />
+    <ClInclude Include="Vector3f.h" />
+    <ClInclude Include="StringCompare.h" />
+    <ClInclude Include="VehicleEnter-Exit.h" />
+    <ClInclude Include="VehicleRespawnHandler.h" />
+    <ClInclude Include="WeaponPickup-Drop.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="7z_dec.cpp" />
+    <ClCompile Include="Addresses.cpp" />
+    <ClCompile Include="Admins.cpp" />
+    <ClCompile Include="AimbotScan.cpp" />
+    <ClCompile Include="AliasThread.cpp" />
+    <ClCompile Include="APIFunctions.cpp" />
+    <ClCompile Include="Areas.cpp" />
+    <ClCompile Include="ComboFix.cpp" />
+    <ClCompile Include="CustomCommandFactory.cpp" />
+    <ClCompile Include="DamageApplicationHook.cpp" />
+    <ClCompile Include="ArgContainer.cpp" />
+    <ClCompile Include="Assist.cpp" />
+    <ClCompile Include="BlockCheatSpawns.cpp" />
+    <ClCompile Include="CDKeyCheck.cpp" />
+    <ClCompile Include="ClientUpdateFixes.cpp" />
+    <ClCompile Include="ConsolePrintHook.cpp" />
+    <ClCompile Include="GameStart-End.cpp" />
+    <ClCompile Include="HillTimer.cpp" />
+    <ClCompile Include="jsoncpp.cpp" />
+    <ClCompile Include="Killed.cpp" />
+    <ClCompile Include="CommandFactory.cpp" />
+    <ClCompile Include="LuaHandler.cpp" />
+    <ClCompile Include="MapLoader.cpp" />
+    <ClCompile Include="MapReset.cpp" />
+    <ClCompile Include="MotdHook.cpp" />
+    <ClCompile Include="ObjectRespawn.cpp" />
+    <ClCompile Include="ObjectSyncCleanup.cpp" />
+    <ClCompile Include="PingUpdate.cpp" />
+    <ClCompile Include="RemoteConsole.cpp" />
+    <ClCompile Include="RemoteConsoleNetworking.cpp" />
+    <ClCompile Include="Score.cpp" />
+    <ClCompile Include="MiscellaneousFunctions.cpp" />
+    <ClCompile Include="mtv.cpp" />
+    <ClCompile Include="NetworkClient.cpp" />
+    <ClCompile Include="NetworkThread.cpp" />
+    <ClCompile Include="bans.cpp" />
+    <ClCompile Include="chat.cpp" />
+    <ClCompile Include="ConsolePatch.cpp" />
+    <ClCompile Include="CustomCommand.cpp" />
+    <ClCompile Include="CommandExecuter.cpp" />
+    <ClCompile Include="GenericCommand.cpp" />
+    <ClCompile Include="Locations.cpp" />
+    <ClCompile Include="Mapcycle.cpp" />
+    <ClCompile Include="NetworkHook.cpp" />
+    <ClCompile Include="ObjectCreation.cpp" />
+    <ClCompile Include="ObjectInteractions.cpp" />
+    <ClCompile Include="OnlineAdmins.cpp" />
+    <ClCompile Include="Patcher.cpp" />
+    <ClCompile Include="ObjectManagement.cpp" />
+    <ClCompile Include="GSQueryPatch.cpp" />
+    <ClCompile Include="Patches.cpp" />
+    <ClCompile Include="PlayerCommand.cpp" />
+    <ClCompile Include="PlayerJoin-Leave.cpp" />
+    <ClCompile Include="PlayerQuitKillFix.cpp" />
+    <ClCompile Include="Prefs.cpp" />
+    <ClCompile Include="rcon.cpp" />
+    <ClCompile Include="NoLead.cpp" />
+    <ClCompile Include="Replace.cpp" />
+    <ClCompile Include="EventScan.cpp" />
+    <ClCompile Include="codefinder.cpp" />
+    <ClCompile Include="CommandEnviroment.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="HaloUtilities.cpp" />
+    <ClCompile Include="LogThread.cpp" />
+    <ClCompile Include="MapVote.cpp" />
+    <ClCompile Include="NetworkEvents.cpp" />
+    <ClCompile Include="HaloThreadHook.cpp" />
+    <ClCompile Include="signatures.cpp" />
+    <ClCompile Include="Spawn.cpp" />
+    <ClCompile Include="Stick.cpp" />
+    <ClCompile Include="SuperMain.cpp" />
+    <ClCompile Include="MapCheckAndExecute.cpp" />
+    <ClCompile Include="SystemMonitor.cpp" />
+    <ClCompile Include="TabCompletion.cpp" />
+    <ClCompile Include="TeamBalance.cpp" />
+    <ClCompile Include="TeamChange.cpp" />
+    <ClCompile Include="Teleport.cpp" />
+    <ClCompile Include="TextUtilities.cpp" />
+    <ClCompile Include="ThreadCycleFix.cpp" />
+    <ClCompile Include="Threads.cpp" />
+    <ClCompile Include="UnloadHook.cpp" />
+    <ClCompile Include="UserList.cpp" />
+    <ClCompile Include="StringCompare.cpp" />
+    <ClCompile Include="VehicleEnter-Exit.cpp" />
+    <ClCompile Include="VehicleRespawnHandler.cpp" />
+    <ClCompile Include="WeaponPickup-Drop.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="sapp.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

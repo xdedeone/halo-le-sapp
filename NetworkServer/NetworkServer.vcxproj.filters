@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="NetworkServer">
+      <UniqueIdentifier>{6da61a0f-1a03-483d-b106-38d734e68df2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Globals">
+      <UniqueIdentifier>{02035578-509a-489c-add5-125fdc20decf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySQLServer">
+      <UniqueIdentifier>{ce124fb2-fe79-4ea5-8263-17960ed1c3d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomLoad">
+      <UniqueIdentifier>{7485baa4-0f05-4602-a688-d3cc90137e62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TextUtilities">
+      <UniqueIdentifier>{8ff9f6b6-8017-4aca-a2a7-9e0288edcc9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pool">
+      <UniqueIdentifier>{3a4170dd-5666-4c32-8309-5b946a438044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pool\drivers">
+      <UniqueIdentifier>{a97940b9-b644-4c87-bf58-54d3309c7732}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SafePrint">
+      <UniqueIdentifier>{db038c46-f7a2-4ad4-b225-709846d68f0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logger">
+      <UniqueIdentifier>{9cfd00a5-c0e7-4631-b0dc-c468e008d28a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThreadPool">
+      <UniqueIdentifier>{ed6948f6-f986-4836-93c3-1c1d2d8cdc15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RC6">
+      <UniqueIdentifier>{146af47a-e7d7-495b-9a91-62616ffe25d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HaloRank">
+      <UniqueIdentifier>{5966ee1a-a61d-4290-aaa1-76aa2f4192b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkServer.cpp">
+      <Filter>NetworkServer</Filter>
+    </ClCompile>
+    <ClCompile Include="globals.cpp">
+      <Filter>Globals</Filter>
+    </ClCompile>
+    <ClCompile Include="MySQLServer.cpp">
+      <Filter>MySQLServer</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomLoad.cpp">
+      <Filter>CustomLoad</Filter>
+    </ClCompile>
+    <ClCompile Include="TextUtilities.cpp">
+      <Filter>TextUtilities</Filter>
+    </ClCompile>
+    <ClCompile Include="pool\drivers\MySQLDriver.cpp">
+      <Filter>pool\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_pool.cpp">
+      <Filter>ThreadPool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RC6\rc6_16.cpp">
+      <Filter>RC6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RC6\rc6_32.cpp">
+      <Filter>RC6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RC6\rc6_64.cpp">
+      <Filter>RC6</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NetworkServer.h">
+      <Filter>NetworkServer</Filter>
+    </ClInclude>
+    <ClInclude Include="globals.h">
+      <Filter>Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQLServer.h">
+      <Filter>MySQLServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Locker.h">
+      <Filter>Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="HR_Event.h">
+      <Filter>HaloRank</Filter>
+    </ClInclude>
+    <ClInclude Include="structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Events\NetworkEvents.h">
+      <Filter>NetworkServer</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLoad.h">
+      <Filter>CustomLoad</Filter>
+    </ClInclude>
+    <ClInclude Include="TextUtilities.h">
+      <Filter>TextUtilities</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\drivers\MySQLDriver.h">
+      <Filter>pool\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\Connection.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\ConnectionPool.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\Exception.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\Policies.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\PoolManager.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="Semaphore.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="Spinlock.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="SafePrint.h">
+      <Filter>SafePrint</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_pool.h">
+      <Filter>ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\LogSeverity.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RC6\rc6_16.h">
+      <Filter>RC6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RC6\rc6_32.h">
+      <Filter>RC6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RC6\rc6_64.h">
+      <Filter>RC6</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

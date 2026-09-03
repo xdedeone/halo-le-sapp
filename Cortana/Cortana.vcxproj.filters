@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="NetworkClient">
+      <UniqueIdentifier>{899abfec-c704-4a14-a56b-920f027a4fe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AntidebugStuffzor">
+      <UniqueIdentifier>{d95f2bf9-e10a-4495-8fba-2187a2bbb555}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="codefinder">
+      <UniqueIdentifier>{f60d0c0e-dd3c-4ec5-baca-f022eecf9daf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PerfomanceCounter">
+      <UniqueIdentifier>{43550294-332b-45fa-9ad1-1427b42ad345}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sha256">
+      <UniqueIdentifier>{1c07e7b9-a8d6-4d50-a117-c960aec29c21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SendChatMessage">
+      <UniqueIdentifier>{d32fa9f9-721a-4712-a3a1-cae49a7f824b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JPGE">
+      <UniqueIdentifier>{03001147-1004-43ec-9d10-d3cf0cf13f0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threads">
+      <UniqueIdentifier>{780bfc4b-804d-4674-8eef-0255b9659829}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MiscFunctions">
+      <UniqueIdentifier>{2420ef60-7c69-4edd-a4b9-9451e6989a1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CommandHandler">
+      <UniqueIdentifier>{bfd43393-1bd2-46d1-b783-32bdb0bea5bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ArgContainer">
+      <UniqueIdentifier>{8caa7154-33e1-4605-aeb2-b69361fa3a14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RC6">
+      <UniqueIdentifier>{77176399-7565-495c-bb10-0bea63352b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides">
+      <UniqueIdentifier>{d8b47476-51cc-4661-aff0-9c38dfe9ca09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\PatchClass">
+      <UniqueIdentifier>{096299b5-32a1-4867-94bc-dd28ad2cc545}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches">
+      <UniqueIdentifier>{1a5adbdb-70ea-4a57-afb3-ee2fede72fe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ForwardTablesPatch">
+      <UniqueIdentifier>{47216ec7-bed8-4290-b247-2ba5ee276b61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ForwardCameraStructPatch">
+      <UniqueIdentifier>{fdc3cbd7-3a02-4536-b3e5-396c954f0ea6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\MapChecksumPatch">
+      <UniqueIdentifier>{13908b1d-f501-41a0-8baa-d1de1d237c87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ForwardPlayersTablePatch">
+      <UniqueIdentifier>{8cd06fce-38dd-4105-8466-4a8ab351aa27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\KeystonePatch">
+      <UniqueIdentifier>{3f5200d2-dc15-4112-bef3-0c667843c626}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\WindowNamePatch">
+      <UniqueIdentifier>{c876e889-a412-4273-9641-7613628807f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\RasterisePatches">
+      <UniqueIdentifier>{25b6e4e5-42e1-48b7-b9af-f6aeee36e7c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ForwardTagTablePatch">
+      <UniqueIdentifier>{f4be73ab-0fda-4f78-bae0-9cec2fc8ebe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\DXPatch">
+      <UniqueIdentifier>{b486729d-ed39-4b08-bed5-f0ce166cbd0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ForwardCrossairPatch">
+      <UniqueIdentifier>{d6efb994-16bb-40f4-bc7b-7e3833cc6218}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ScreenShots">
+      <UniqueIdentifier>{bf432be2-46f7-4bcd-b7fe-4994a4020899}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ScoreboardPatch">
+      <UniqueIdentifier>{4a87a2ad-69b0-406d-a177-9e2c49763d94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\JoinPatch">
+      <UniqueIdentifier>{941e2859-2ded-462e-9cc2-61ce4d52aa50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\FoV Change">
+      <UniqueIdentifier>{d922569f-ab7b-44f1-892d-ae088b8e7480}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\ConsoleHook">
+      <UniqueIdentifier>{68630b58-9955-4b0a-ba05-f0fa66c68c33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\MapCache">
+      <UniqueIdentifier>{325ed16b-98ba-4d63-815d-860b24d61b40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\NetworkEvents">
+      <UniqueIdentifier>{a02287a7-1abd-49f0-a94b-dc6510657a94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Patches\HaloThreadPatch">
+      <UniqueIdentifier>{7fed99e5-c2d2-4037-8bd6-54d13c9e93fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembly Code Overrides\Addresses">
+      <UniqueIdentifier>{fb356527-282c-4396-ad92-c475e94c770f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NetworkClient.cpp">
+      <Filter>NetworkClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codefinder.cpp">
+      <Filter>codefinder</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicCodeXOR.cpp">
+      <Filter>AntidebugStuffzor</Filter>
+    </ClCompile>
+    <ClCompile Include="Patch.cpp">
+      <Filter>Assembly Code Overrides\PatchClass</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardTablesPatch.cpp">
+      <Filter>Assembly Code Overrides\Patches\ForwardTablesPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardCameraStructPatch.cpp">
+      <Filter>Assembly Code Overrides\Patches\ForwardCameraStructPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="StringCrypter.cpp">
+      <Filter>AntidebugStuffzor</Filter>
+    </ClCompile>
+    <ClCompile Include="MapChecksum.cpp">
+      <Filter>Assembly Code Overrides\Patches\MapChecksumPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="sha256.cpp">
+      <Filter>sha256</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardPlayersTablePatch.cpp">
+      <Filter>Assembly Code Overrides\Patches\ForwardPlayersTablePatch</Filter>
+    </ClCompile>
+    <ClCompile Include="sha256_file.cpp">
+      <Filter>sha256</Filter>
+    </ClCompile>
+    <ClCompile Include="SendChatMessage.cpp">
+      <Filter>SendChatMessage</Filter>
+    </ClCompile>
+    <ClCompile Include="KeystonePatch.cpp">
+      <Filter>Assembly Code Overrides\Patches\KeystonePatch</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowNamePatch.cpp">
+      <Filter>Assembly Code Overrides\Patches\WindowNamePatch</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterisePatches.cpp">
+      <Filter>Assembly Code Overrides\Patches\RasterisePatches</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardTagsTablePatch.cpp">
+      <Filter>Assembly Code Overrides\Patches\ForwardTagTablePatch</Filter>
+    </ClCompile>
+    <ClCompile Include="JoinPatch.cpp">
+      <Filter>Assembly Code Overrides\Patches\JoinPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXPatch.cpp">
+      <Filter>Assembly Code Overrides\Patches\DXPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardCrossairPatch.cpp">
+      <Filter>Assembly Code Overrides\Patches\ForwardCrossairPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="jpge.cpp">
+      <Filter>JPGE</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenShots.cpp">
+      <Filter>Assembly Code Overrides\Patches\ScreenShots</Filter>
+    </ClCompile>
+    <ClCompile Include="Threads.cpp">
+      <Filter>Threads</Filter>
+    </ClCompile>
+    <ClCompile Include="MiscFunctions.cpp">
+      <Filter>MiscFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="Addresses.cpp">
+      <Filter>Assembly Code Overrides\Addresses</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreboardPatch.cpp">
+      <Filter>Assembly Code Overrides\Patches\ScoreboardPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="FoVChange.cpp">
+      <Filter>Assembly Code Overrides\Patches\FoV Change</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleHook.cpp">
+      <Filter>Assembly Code Overrides\Patches\ConsoleHook</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandHandler.cpp">
+      <Filter>CommandHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="ArgContainer.cpp">
+      <Filter>ArgContainer</Filter>
+    </ClCompile>
+    <ClCompile Include="MapCache.cpp">
+      <Filter>Assembly Code Overrides\Patches\MapCache</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkEvents.cpp">
+      <Filter>Assembly Code Overrides\Patches\NetworkEvents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RC6\rc6_16.cpp">
+      <Filter>RC6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RC6\rc6_64.cpp">
+      <Filter>RC6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RC6\rc6_32.cpp">
+      <Filter>RC6</Filter>
+    </ClCompile>
+    <ClCompile Include="HaloThreadHook.cpp">
+      <Filter>Assembly Code Overrides\Patches\HaloThreadPatch</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NetworkClient.h">
+      <Filter>NetworkClient</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkStructs.h">
+      <Filter>NetworkClient</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicCodeXOR.h">
+      <Filter>AntidebugStuffzor</Filter>
+    </ClInclude>
+    <ClInclude Include="codefinder.h">
+      <Filter>codefinder</Filter>
+    </ClInclude>
+    <ClInclude Include="PerfomanceCounter.h">
+      <Filter>PerfomanceCounter</Filter>
+    </ClInclude>
+    <ClInclude Include="Patch.h">
+      <Filter>Assembly Code Overrides\PatchClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardTablesPatch.h">
+      <Filter>Assembly Code Overrides\Patches\ForwardTablesPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardCameraStructPatch.h">
+      <Filter>Assembly Code Overrides\Patches\ForwardCameraStructPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="StringCrypter.h">
+      <Filter>AntidebugStuffzor</Filter>
+    </ClInclude>
+    <ClInclude Include="MapChecksum.h">
+      <Filter>Assembly Code Overrides\Patches\MapChecksumPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="sha256.h">
+      <Filter>sha256</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardPlayersTablePatch.h">
+      <Filter>Assembly Code Overrides\Patches\ForwardPlayersTablePatch</Filter>
+    </ClInclude>
+    <ClInclude Include="IsDebuggerPresentTrick.h">
+      <Filter>AntidebugStuffzor</Filter>
+    </ClInclude>
+    <ClInclude Include="sha256_file.h">
+      <Filter>sha256</Filter>
+    </ClInclude>
+    <ClInclude Include="SendChatMessage.h">
+      <Filter>SendChatMessage</Filter>
+    </ClInclude>
+    <ClInclude Include="KeystonePatch.h">
+      <Filter>Assembly Code Overrides\Patches\KeystonePatch</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowNamePatch.h">
+      <Filter>Assembly Code Overrides\Patches\WindowNamePatch</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterisePatches.h">
+      <Filter>Assembly Code Overrides\Patches\RasterisePatches</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardTagsTablePatch.h">
+      <Filter>Assembly Code Overrides\Patches\ForwardTagTablePatch</Filter>
+    </ClInclude>
+    <ClInclude Include="JoinPatch.h">
+      <Filter>Assembly Code Overrides\Patches\JoinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXPatch.h">
+      <Filter>Assembly Code Overrides\Patches\DXPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardCrossairPatch.h">
+      <Filter>Assembly Code Overrides\Patches\ForwardCrossairPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="jpge.h">
+      <Filter>JPGE</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenShots.h">
+      <Filter>Assembly Code Overrides\Patches\ScreenShots</Filter>
+    </ClInclude>
+    <ClInclude Include="Threads.h">
+      <Filter>Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="MiscFunctions.h">
+      <Filter>MiscFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="Addresses.h">
+      <Filter>Assembly Code Overrides\Addresses</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreboardPatch.h">
+      <Filter>Assembly Code Overrides\Patches\ScoreboardPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="FoVChange.h">
+      <Filter>Assembly Code Overrides\Patches\FoV Change</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleHook.h">
+      <Filter>Assembly Code Overrides\Patches\ConsoleHook</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandHandler.h">
+      <Filter>CommandHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgContainer.h">
+      <Filter>ArgContainer</Filter>
+    </ClInclude>
+    <ClInclude Include="MapCache.h">
+      <Filter>Assembly Code Overrides\Patches\MapCache</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkEvents.h">
+      <Filter>Assembly Code Overrides\Patches\NetworkEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RC6\rc6_16.h">
+      <Filter>RC6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RC6\rc6_32.h">
+      <Filter>RC6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RC6\rc6_64.h">
+      <Filter>RC6</Filter>
+    </ClInclude>
+    <ClInclude Include="HaloThreadHook.h">
+      <Filter>Assembly Code Overrides\Patches\HaloThreadPatch</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
